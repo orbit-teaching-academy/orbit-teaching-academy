@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orbit Teaching Academy — Get Certified. Teach. Travel. Transform Lives.</title>
+  <meta name="description" content="Orbit Teaching Academy prepares educators to get Cambridge CELTA certified, secure international teaching positions, and build a life of purpose. Your Certification. Your Passport. Your Future."/>
+  <meta name="keywords" content="CELTA, Cambridge CELTA, teach abroad, English teaching certification, TEFL, TESOL, teach English abroad, international teaching"/>
+  <meta name="author" content="Orbit Teaching Academy"/>
+  <link rel="canonical" href="https://www.orbitteachingacademy.com"/>
+  <meta property="og:title" content="Orbit Teaching Academy — Get Certified. Teach. Travel. Transform Lives."/>
+  <meta property="og:description" content="Get Cambridge CELTA certified and launch your international teaching career. Your Certification. Your Passport. Your Future."/>
+  <meta property="og:url" content="https://www.orbitteachingacademy.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Orbit Teaching Academy"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Orbit Teaching Academy"/>
+  <meta name="twitter:description" content="Get Cambridge CELTA certified and launch your international teaching career."/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #1B2C5E;
+      --navy-deep:  #111E42;
+      --teal:       #3A9B9B;
+      --teal-light: #5BBFBF;
+      --teal-pale:  #EAF7F7;
+      --gold:       #C8922A;
+      --gold-light: #E8B94F;
+      --white:      #FFFFFF;
+      --off-white:  #F7FBFB;
+      --gray:       #6B7A99;
+      --gray-light: #E8EDF5;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--white);
+      color: var(--navy-deep);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 5vw;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(58,155,155,0.15);
+      box-shadow: 0 2px 20px rgba(27,44,94,0.06);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .logo-icon::after {
+      content: '';
+      position: absolute; inset: -3px;
+      border-radius: 50%;
+      border: 2px solid var(--teal);
+      opacity: 0.5;
+    }
+    .logo-text { line-height: 1.1; }
+    .logo-text strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--navy); letter-spacing: 0.02em;
+    }
+    .logo-text span {
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal);
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--navy);
+      font-size: 0.88rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta {
+      background: var(--navy); color: var(--white);
+      padding: 0.65rem 1.5rem; border-radius: 3px;
+      font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: var(--teal); transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy-deep);
+      position: relative; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 8rem 5vw 5rem;
+      gap: 4rem;
+    }
+    .hero-image-wrap {
+      position: relative; z-index: 1;
+      opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
+    }
+    .hero-image-wrap img {
+      width: 100%; height: 520px;
+      object-fit: cover; object-position: center;
+      border-radius: 8px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+      border: 2px solid rgba(58,155,155,0.2);
+    }
+    .hero-image-wrap::before {
+      content: '';
+      position: absolute; top: -12px; right: -12px;
+      width: 100%; height: 100%;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      opacity: 0.3; z-index: -1;
+    }
+    /* Orbiting ring decoration */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(58,155,155,0.2);
+      pointer-events: none;
+    }
+    .orb-1 { width: 600px; height: 600px; top: -150px; right: -100px; }
+    .orb-2 { width: 900px; height: 900px; top: -300px; right: -300px; border-color: rgba(58,155,155,0.1); }
+    .orb-3 { width: 300px; height: 300px; bottom: -80px; left: 10%; border-color: rgba(200,146,42,0.15); }
+
+    /* Globe SVG bg */
+    .hero-globe {
+      position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+      width: 480px; height: 480px; opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(58,155,155,0.15);
+      border: 1px solid rgba(58,155,155,0.3);
+      color: var(--teal-light); padding: 0.4rem 1rem;
+      border-radius: 50px; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+    }
+    .hero-badge::before { content: '✈'; font-size: 0.9rem; }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5.5vw, 6rem);
+      font-weight: 700; line-height: 1.0;
+      color: var(--white); letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.4s forwards;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero h1 .teal { color: var(--teal-light); font-style: normal; }
+    .hero-sub {
+      font-size: 1.1rem; line-height: 1.75; font-weight: 300;
+      color: rgba(255,255,255,0.65); max-width: 520px;
+      margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.6s forwards;
+    }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.15rem;
+      color: var(--gold-light); margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.7s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.7s 0.8s forwards;
+    }
+    .btn-gold {
+      background: var(--gold); color: var(--white);
+      padding: 1rem 2.2rem; border-radius: 3px;
+      font-weight: 700; font-size: 0.9rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(200,146,42,0.35);
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 1rem 2.2rem; border-radius: 3px;
+      font-weight: 500; font-size: 0.9rem;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--teal-light); background: rgba(58,155,155,0.1); }
+
+    /* Pillars strip */
+    .pillars {
+      background: var(--white);
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .pillar {
+      padding: 2rem 5vw;
+      display: flex; align-items: center; gap: 1rem;
+      border-right: 1px solid var(--gray-light);
+      transition: background 0.2s;
+    }
+    .pillar:last-child { border-right: none; }
+    .pillar:hover { background: var(--teal-pale); }
+    .pillar-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .pillar-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--teal); display: block;
+    }
+    .pillar-text { font-size: 0.92rem; font-weight: 600; color: var(--navy); }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 7rem 5vw;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+      border-radius: 6px; aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6rem; position: relative; overflow: hidden;
+    }
+    .about-img-box::after {
+      content: '';
+      position: absolute; bottom: -20px; right: -20px;
+      width: 140px; height: 140px;
+      border: 3px solid var(--gold);
+      border-radius: 4px; z-index: -1;
+    }
+    .about-stat-float {
+      position: absolute; bottom: -1.5rem; left: -1.5rem;
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-radius: 6px; padding: 1.2rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(27,44,94,0.12);
+    }
+    .float-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem; font-weight: 700; color: var(--navy); line-height: 1;
+    }
+    .float-label { font-size: 0.75rem; color: var(--gray); margin-top: 0.2rem; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--teal);
+      display: block; margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--teal); }
+    .section-body {
+      font-size: 1rem; line-height: 1.8; color: var(--gray);
+      margin-bottom: 1.2rem;
+    }
+    .check-list { list-style: none; margin-top: 1.5rem; }
+    .check-list li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--navy-deep);
+    }
+    .check-list li::before {
+      content: '✓';
+      background: var(--teal); color: white;
+      width: 20px; height: 20px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ── PROGRAMS ── */
+    .programs { padding: 7rem 5vw; background: var(--off-white); }
+    .programs-header { text-align: center; max-width: 620px; margin: 0 auto 4rem; }
+    .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .program-card {
+      background: var(--white);
+      border-radius: 6px; overflow: hidden;
+      border: 1px solid var(--gray-light);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .program-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(27,44,94,0.12); }
+    .program-card.featured {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 2px rgba(58,155,155,0.2);
+    }
+    .program-header-bar {
+      height: 6px;
+    }
+    .bar-teal { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+    .bar-gold { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+    .bar-navy { background: linear-gradient(90deg, var(--navy), #2D4A9E); }
+    .featured-badge {
+      background: var(--teal); color: white;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.3rem 0.8rem;
+      text-align: center;
+    }
+    .program-body { padding: 2rem; }
+    .program-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .program-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .program-subtitle { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+    .program-desc { font-size: 0.9rem; line-height: 1.7; color: var(--gray); margin-bottom: 1.5rem; }
+    .program-features { list-style: none; margin-bottom: 1.5rem; }
+    .program-features li {
+      font-size: 0.85rem; padding: 0.4rem 0;
+      border-bottom: 1px solid var(--gray-light);
+      color: var(--navy-deep); display: flex; align-items: center; gap: 0.5rem;
+    }
+    .program-features li:last-child { border-bottom: none; }
+    .program-features li::before { content: '→'; color: var(--teal); font-size: 0.75rem; }
+    .program-price {
+      display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 1.2rem;
+    }
+    .price-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 700; color: var(--navy);
+    }
+    .price-note { font-size: 0.8rem; color: var(--gray); }
+    .btn-teal {
+      display: block; text-align: center;
+      background: var(--teal); color: var(--white);
+      padding: 0.8rem; border-radius: 3px;
+      font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-teal:hover { background: var(--navy); }
+    .btn-navy {
+      display: block; text-align: center;
+      background: var(--navy); color: var(--white);
+      padding: 0.8rem; border-radius: 3px;
+      font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-navy:hover { background: var(--teal); }
+
+    /* ── DESTINATIONS ── */
+    .destinations { padding: 7rem 5vw; }
+    .destinations-header { text-align: center; max-width: 620px; margin: 0 auto 4rem; }
+    .dest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .dest-card {
+      border-radius: 6px; overflow: hidden; position: relative;
+      aspect-ratio: 3/4; cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .dest-card:hover { transform: scale(1.03); }
+    .dest-card:hover .dest-overlay { opacity: 1; }
+    .dest-bg {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+    }
+    .d1 { background: linear-gradient(160deg, #1B6B6B 0%, #0E3D3D 100%); }
+    .d2 { background: linear-gradient(160deg, #1A3A6B 0%, #0E2040 100%); }
+    .d3 { background: linear-gradient(160deg, #6B3A1A 0%, #3D1E0A 100%); }
+    .d4 { background: linear-gradient(160deg, #1A5A3A 0%, #0E3020 100%); }
+    .dest-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(17,30,66,0.9));
+      padding: 2rem 1.2rem 1.2rem;
+      color: white;
+    }
+    .dest-country { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 0.2rem; }
+    .dest-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; }
+    .dest-jobs { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 0.2rem; }
+    .dest-overlay {
+      position: absolute; inset: 0;
+      background: rgba(58,155,155,0.2);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .dest-overlay span {
+      background: var(--gold); color: white;
+      padding: 0.5rem 1.2rem; border-radius: 2px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how { padding: 7rem 5vw; background: var(--navy-deep); }
+    .how .section-label { color: var(--teal-light); }
+    .how .section-title { color: var(--white); }
+    .how .section-title em { color: var(--gold-light); }
+    .how-header { text-align: center; max-width: 620px; margin: 0 auto 5rem; }
+    .how-sub { font-size: 1rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-top: 1rem; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .step { position: relative; text-align: center; padding: 0 0.5rem; }
+    .step:not(:last-child)::after {
+      content: '→';
+      position: absolute; top: 2rem; right: -1rem;
+      color: var(--teal); font-size: 1.2rem; opacity: 0.5;
+    }
+    .step-num {
+      width: 4.5rem; height: 4.5rem;
+      border: 2px solid var(--teal);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--teal);
+      background: rgba(58,155,155,0.08);
+    }
+    .step-icon { font-size: 1.4rem; display: block; margin-bottom: 0.5rem; }
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem;
+    }
+    .step-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { padding: 7rem 5vw; background: var(--off-white); }
+    .testimonials-header { text-align: center; max-width: 580px; margin: 0 auto 4rem; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .tcard {
+      background: var(--white); border-radius: 6px;
+      border: 1px solid var(--gray-light); padding: 2rem;
+      position: relative;
+    }
+    .tcard::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem; line-height: 1; color: var(--teal);
+      opacity: 0.15;
+      position: absolute; top: 0.5rem; left: 1.2rem;
+    }
+    .tcard-flag { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .tcard-text {
+      font-size: 0.93rem; line-height: 1.75; color: var(--navy-deep);
+      margin-bottom: 1.5rem; position: relative;
+    }
+    .tcard-author { display: flex; align-items: center; gap: 0.8rem; border-top: 1px solid var(--gray-light); padding-top: 1rem; }
+    .tcard-avatar {
+      width: 2.5rem; height: 2.5rem; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700; color: white; flex-shrink: 0;
+    }
+    .av-teal { background: var(--teal); }
+    .av-navy { background: var(--navy); }
+    .av-gold { background: var(--gold); }
+    .tcard-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+    .tcard-where { font-size: 0.78rem; color: var(--gray); }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #1E5A7A 100%);
+      padding: 7rem 5vw;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-orb {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(58,155,155,0.15);
+      pointer-events: none;
+    }
+    .cta-orb-1 { width: 500px; height: 500px; top: -200px; right: -100px; }
+    .cta-orb-2 { width: 300px; height: 300px; bottom: -100px; left: 5%; border-color: rgba(200,146,42,0.12); }
+    .cta-eyebrow {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--teal-light); margin-bottom: 1.2rem;
+    }
+    .cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      font-weight: 700; color: var(--white); line-height: 1.1;
+      margin-bottom: 1.2rem; position: relative; z-index: 1;
+    }
+    .cta-title em { font-style: italic; color: var(--gold-light); }
+    .cta-sub {
+      font-size: 1.05rem; color: rgba(255,255,255,0.6);
+      max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.7;
+      position: relative; z-index: 1;
+    }
+    .cta-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.2rem;
+      color: var(--gold-light); margin-bottom: 2.5rem;
+      position: relative; z-index: 1;
+    }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; position: relative; z-index: 1; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0C1528; color: white;
+      padding: 5rem 5vw 2rem;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-brand-desc {
+      font-size: 0.9rem; color: rgba(255,255,255,0.45); line-height: 1.8; margin-top: 1rem;
+    }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1rem;
+      color: var(--gold-light); margin-top: 0.75rem;
+    }
+    .footer-col h4 {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--teal-light); margin-bottom: 1.2rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.65rem; }
+    .footer-col a {
+      text-decoration: none; color: rgba(255,255,255,0.45);
+      font-size: 0.88rem; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--teal-light); }
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="logo.png" alt="Orbit Teaching Academy" style="height:52px; width:auto; display:block;"/>
+  </div>
+  <ul class="nav-links">
+    <li><a href="celta.html">The Training</a></li>
+    <li><a href="#outcomes">Outcomes</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#testimonials">Stories</a></li>
+  </ul>
+  <a href="celta.html" class="nav-cta">Explore Training</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Now enrolling — Summer 2026 cohort</div>
+    <h1>Your certification.<br/>Your passport.<br/><em>Your future.</em></h1>
+    <p class="hero-sub">Orbit Teaching Academy prepares educators to get TEFL/TESOL certified, secure international teaching positions, and build a life of purpose — wherever in the world that takes you.</p>
+    <div class="hero-tagline">Get Certified. 🌐 Teach. ✈ Travel. 📍 Transform Lives.</div>
+    <div class="hero-actions">
+      <a href="celta.html" class="btn-gold">Explore the Training →</a>
+      <a href="#how" class="btn-outline">How It Works</a>
+    </div>
+  </div>
+  <!-- Hero image on the right -->
+  <div class="hero-image-wrap">
+    <img src="hero-image.png" alt="Students teaching and travelling abroad with Orbit Teaching Academy"/>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<div class="pillars">
+  <div class="pillar">
+    <div class="pillar-icon">🎓</div>
+    <div>
+      <span class="pillar-label">Step 1</span>
+      <div class="pillar-text">Get Certified</div>
+    </div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-icon">📚</div>
+    <div>
+      <span class="pillar-label">Step 2</span>
+      <div class="pillar-text">Teach</div>
+    </div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-icon">✈️</div>
+    <div>
+      <span class="pillar-label">Step 3</span>
+      <div class="pillar-text">Travel</div>
+    </div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-icon">🌟</div>
+    <div>
+      <span class="pillar-label">Step 4</span>
+      <div class="pillar-text">Transform Lives</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-visual">
+    <div class="about-img-box">🌍</div>
+    <div class="about-stat-float">
+      <div class="float-num">40+</div>
+      <div class="float-label">Countries Our Grads Teach In</div>
+    </div>
+  </div>
+  <div>
+    <span class="section-label">About Orbit</span>
+    <h2 class="section-title">We don't just certify —<br/>we <em>launch careers.</em></h2>
+    <p class="section-body">Orbit Teaching Academy is more than a certification program. We're a launchpad for educators who want to combine their passion for teaching with a desire to see the world and make a lasting impact.</p>
+    <p class="section-body">From our rigorous TEFL/TESOL training to our global job placement support, we walk with you every step of the journey — from your first lesson plan to your first international classroom.</p>
+    <ul class="check-list">
+      <li>Internationally recognized TEFL/TESOL certification</li>
+      <li>Job placement support in 40+ countries</li>
+      <li>Dedicated coach & mentorship throughout</li>
+      <li>Vibrant alumni community across the globe</li>
+      <li>Fully online, self-paced learning options</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRAINING SECTION -->
+<section id="training" style="padding:7rem 5vw; background:var(--off-white);">
+  <div style="text-align:center; max-width:660px; margin:0 auto 5rem;">
+    <span class="section-label">World-Class Teacher Training</span>
+    <h2 class="section-title">The <em>Cambridge CELTA</em> — the gold standard in English language teaching</h2>
+    <p style="font-size:1rem; color:var(--gray); line-height:1.8; margin-top:1rem;">The Certificate in English Language Teaching to Adults (CELTA) is awarded by Cambridge Assessment English — one of the world's most respected educational institutions. It is recognised and respected by employers in over 100 countries.</p>
+  </div>
+
+  <!-- What is CELTA -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; margin-bottom:6rem;">
+    <div>
+      <span class="section-label">What Is CELTA?</span>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; line-height:1.15; margin-bottom:1.2rem;">A qualification built for <em style="color:var(--teal)">real classrooms</em></h3>
+      <p style="font-size:1rem; color:var(--gray); line-height:1.8; margin-bottom:1rem;">CELTA is not just a theoretical course — it combines practical teaching experience with evidence-based methodology. You'll plan and deliver real lessons to real adult learners, observed and guided by experienced tutors throughout.</p>
+      <p style="font-size:1rem; color:var(--gray); line-height:1.8; margin-bottom:1.5rem;">It is one of the only entry-level qualifications in English language teaching that requires candidates to complete observed, assessed teaching practice as part of the course.</p>
+      <ul class="check-list">
+        <li>Awarded by Cambridge Assessment English</li>
+        <li>Recognised in 100+ countries worldwide</li>
+        <li>Practical teaching practice built into the course</li>
+        <li>No prior teaching experience required</li>
+        <li>Suitable for recent graduates and career changers</li>
+      </ul>
+    </div>
+    <div style="background:linear-gradient(135deg, var(--navy) 0%, #1E5A7A 100%); border-radius:8px; padding:3rem; color:white; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-40px; right:-40px; width:200px; height:200px; border-radius:50%; border:1px solid rgba(58,155,155,0.2);"></div>
+      <div style="position:absolute; bottom:-60px; left:-30px; width:250px; height:250px; border-radius:50%; border:1px solid rgba(200,146,42,0.15);"></div>
+      <div style="position:relative; z-index:1;">
+        <div style="font-size:2.5rem; margin-bottom:1.5rem;">🎓</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">Cambridge Assessment English</div>
+        <div style="font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal-light); margin-bottom:1.5rem;">Certificate Awarding Body</div>
+        <div style="font-size:0.9rem; color:rgba(255,255,255,0.65); line-height:1.7; margin-bottom:2rem;">Cambridge Assessment English is part of the University of Cambridge — setting the benchmark for English language qualifications since 1913.</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;">
+          <div style="background:rgba(255,255,255,0.07); border-radius:4px; padding:1rem; text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:var(--gold-light);">100+</div>
+            <div style="font-size:0.7rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.2rem;">Countries</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.07); border-radius:4px; padding:1rem; text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:var(--gold-light);">110+</div>
+            <div style="font-size:0.7rem; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.2rem;">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What you'll learn: course components -->
+  <div style="text-align:center; max-width:580px; margin:0 auto 3.5rem;">
+    <span class="section-label">Inside the Course</span>
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; line-height:1.15;">Four pillars of <em style="color:var(--teal)">expert teaching</em></h3>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin-bottom:5rem;">
+    <div style="background:var(--white); border:1px solid var(--gray-light); border-top:4px solid var(--teal); border-radius:6px; padding:2rem;">
+      <div style="font-size:2rem; margin-bottom:1rem;">🧠</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Language Analysis</div>
+      <div style="font-size:0.88rem; color:var(--gray); line-height:1.7;">Deep understanding of English grammar, phonology, and vocabulary — so you can explain it clearly to learners at any level.</div>
+    </div>
+    <div style="background:var(--white); border:1px solid var(--gray-light); border-top:4px solid var(--gold); border-radius:6px; padding:2rem;">
+      <div style="font-size:2rem; margin-bottom:1rem;">📝</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Lesson Planning</div>
+      <div style="font-size:0.88rem; color:var(--gray); line-height:1.7;">Design engaging, learner-centred lessons using proven frameworks. From warmer activities to assessment, every stage has purpose.</div>
+    </div>
+    <div style="background:var(--white); border:1px solid var(--gray-light); border-top:4px solid var(--navy); border-radius:6px; padding:2rem;">
+      <div style="font-size:2rem; margin-bottom:1rem;">🎤</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Teaching Practice</div>
+      <div style="font-size:0.88rem; color:var(--gray); line-height:1.7;">Observed, assessed lessons with real adult learners. You'll teach, receive expert feedback, and grow with every session.</div>
+    </div>
+    <div style="background:var(--white); border:1px solid var(--gray-light); border-top:4px solid var(--teal-light); border-radius:6px; padding:2rem;">
+      <div style="font-size:2rem; margin-bottom:1rem;">📚</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Professional Skills</div>
+      <div style="font-size:0.88rem; color:var(--gray); line-height:1.7;">Learner needs analysis, error correction techniques, classroom management, and using materials effectively in diverse contexts.</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- OUTCOMES SECTION -->
+<section id="outcomes" style="padding:7rem 5vw; background:var(--white);">
+  <div style="text-align:center; max-width:640px; margin:0 auto 5rem;">
+    <span class="section-label">What You'll Gain</span>
+    <h2 class="section-title">Life after <em>CELTA</em> — what to expect</h2>
+    <p style="font-size:1rem; color:var(--gray); line-height:1.8; margin-top:1rem;">A CELTA qualification doesn't just open doors — it builds the foundation for a fulfilling, flexible, and internationally mobile career in education.</p>
+  </div>
+
+  <!-- Outcome cards -->
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:5rem;">
+
+    <div style="border:1px solid var(--gray-light); border-radius:8px; padding:2.5rem; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,44,94,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="width:3rem; height:3rem; background:var(--teal-pale); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem;">✈️</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Teach Anywhere in the World</div>
+      <div style="font-size:0.92rem; color:var(--gray); line-height:1.8;">CELTA is recognised by language schools, universities, and English-medium institutions across more than 100 countries. Whether you dream of Tokyo, Madrid, São Paulo, or Dubai — your certificate travels with you.</div>
+    </div>
+
+    <div style="border:1px solid var(--gray-light); border-radius:8px; padding:2.5rem; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,44,94,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="width:3rem; height:3rem; background:rgba(200,146,42,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem;">💼</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Stand Out to Employers</div>
+      <div style="font-size:0.92rem; color:var(--gray); line-height:1.8;">CELTA holders are preferred candidates at reputable language schools worldwide. Many employers specifically require or prioritise Cambridge-accredited qualifications when recruiting international teaching staff.</div>
+    </div>
+
+    <div style="border:1px solid var(--gray-light); border-radius:8px; padding:2.5rem; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,44,94,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="width:3rem; height:3rem; background:rgba(27,44,94,0.07); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem;">🌱</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Build a Career with Purpose</div>
+      <div style="font-size:0.92rem; color:var(--gray); line-height:1.8;">Teaching English is one of the most rewarding careers you can have. You'll change lives — helping students access opportunities, careers, and connections that only language unlocks.</div>
+    </div>
+
+    <div style="border:1px solid var(--gray-light); border-radius:8px; padding:2.5rem; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,44,94,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="width:3rem; height:3rem; background:var(--teal-pale); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem;">📈</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">A Springboard for Growth</div>
+      <div style="font-size:0.92rem; color:var(--gray); line-height:1.8;">CELTA is recognised as an entry point to further Cambridge qualifications like DELTA (Diploma in English Language Teaching). As you grow in experience, your career and earning potential grow with you.</div>
+    </div>
+
+    <div style="border:1px solid var(--gray-light); border-radius:8px; padding:2.5rem; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,44,94,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="width:3rem; height:3rem; background:rgba(200,146,42,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem;">🤝</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Join a Global Community</div>
+      <div style="font-size:0.92rem; color:var(--gray); line-height:1.8;">You'll graduate into a worldwide community of CELTA-trained teachers. Through Orbit's alumni network, you'll stay connected, supported, and inspired throughout your teaching journey.</div>
+    </div>
+
+    <div style="border:1px solid var(--gray-light); border-radius:8px; padding:2.5rem; transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,44,94,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="width:3rem; height:3rem; background:rgba(27,44,94,0.07); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem;">🧳</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">Freedom & Flexibility</div>
+      <div style="font-size:0.92rem; color:var(--gray); line-height:1.8;">Design the life you want. Teach full-time, part-time, or freelance. Work in classrooms, online, or in corporate settings. CELTA gives you the credential — you choose the lifestyle.</div>
+    </div>
+
+  </div>
+
+  <!-- Who is it for -->
+  <div style="background:linear-gradient(135deg, var(--navy-deep), var(--navy)); border-radius:8px; padding:4rem 5rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+    <div>
+      <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal-light); display:block; margin-bottom:1rem;">Who Is This For?</span>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:white; line-height:1.15; margin-bottom:1.2rem;">CELTA is for <em style="color:var(--gold-light)">anyone ready to teach</em></h3>
+      <p style="font-size:0.95rem; color:rgba(255,255,255,0.6); line-height:1.8;">You don't need a teaching degree or previous classroom experience. What you need is a passion for language, a desire to connect with people, and the drive to build a meaningful career.</p>
+    </div>
+    <div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem;">
+        <li style="display:flex; align-items:center; gap:1rem; color:rgba(255,255,255,0.85); font-size:0.95rem;">
+          <span style="background:var(--teal); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0;">🎓</span>
+          Recent graduates exploring career options
+        </li>
+        <li style="display:flex; align-items:center; gap:1rem; color:rgba(255,255,255,0.85); font-size:0.95rem;">
+          <span style="background:var(--teal); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0;">💼</span>
+          Professionals seeking a meaningful career change
+        </li>
+        <li style="display:flex; align-items:center; gap:1rem; color:rgba(255,255,255,0.85); font-size:0.95rem;">
+          <span style="background:var(--teal); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0;">🌍</span>
+          Travellers who want work that funds their adventures
+        </li>
+        <li style="display:flex; align-items:center; gap:1rem; color:rgba(255,255,255,0.85); font-size:0.95rem;">
+          <span style="background:var(--teal); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0;">❤️</span>
+          People passionate about making a difference
+        </li>
+        <li style="display:flex; align-items:center; gap:1rem; color:rgba(255,255,255,0.85); font-size:0.95rem;">
+          <span style="background:var(--teal); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0;">📖</span>
+          Existing teachers looking to formalise their skills
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- DESTINATIONS -->
+<section class="destinations" id="destinations">
+  <div class="destinations-header">
+    <span class="section-label">Where You'll Go</span>
+    <h2 class="section-title">Teach in <em>40+ countries</em></h2>
+    <p style="font-size:1rem; color:var(--gray); line-height:1.7; margin-top:1rem;">Our placement network spans Asia, Europe, Latin America, and beyond. Your classroom could be anywhere.</p>
+  </div>
+  <div class="dest-grid">
+    <div class="dest-card" onclick="location.href='japan.html'" style="cursor:pointer">
+      <div class="dest-bg d1">🇯🇵</div>
+      <div class="dest-info">
+        <div class="dest-country">Asia</div>
+        <div class="dest-name">Japan</div>
+        <div class="dest-jobs">2,400+ open positions</div>
+      </div>
+      <div class="dest-overlay"><span>Explore →</span></div>
+    </div>
+    <div class="dest-card" onclick="location.href='spain.html'" style="cursor:pointer">
+      <div class="dest-bg d2">🇪🇸</div>
+      <div class="dest-info">
+        <div class="dest-country">Europe</div>
+        <div class="dest-name">Spain</div>
+        <div class="dest-jobs">1,800+ open positions</div>
+      </div>
+      <div class="dest-overlay"><span>Explore →</span></div>
+    </div>
+    <div class="dest-card" onclick="location.href='brazil.html'" style="cursor:pointer">
+      <div class="dest-bg d3">🇧🇷</div>
+      <div class="dest-info">
+        <div class="dest-country">Latin America</div>
+        <div class="dest-name">Brazil</div>
+        <div class="dest-jobs">1,200+ open positions</div>
+      </div>
+      <div class="dest-overlay"><span>Explore →</span></div>
+    </div>
+    <div class="dest-card" onclick="location.href='korea.html'" style="cursor:pointer">
+      <div class="dest-bg d4">🇰🇷</div>
+      <div class="dest-info">
+        <div class="dest-country">Asia</div>
+        <div class="dest-name">South Korea</div>
+        <div class="dest-jobs">3,100+ open positions</div>
+      </div>
+      <div class="dest-overlay"><span>Explore →</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-header">
+    <span class="section-label">The Journey</span>
+    <h2 class="section-title">From sign-up to <em>takeoff</em></h2>
+    <p class="how-sub">We've guided hundreds of educators through this exact path. Here's how it works.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <span class="step-icon">🎯</span>
+      <div class="step-title">Choose Your Program</div>
+      <div class="step-desc">Browse our certification tracks and pick the one that matches your goals, timeline, and experience level.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <span class="step-icon">💻</span>
+      <div class="step-title">Complete Your Training</div>
+      <div class="step-desc">Study online at your own pace. Access video lessons, assignments, and live coaching sessions from anywhere.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <span class="step-icon">📜</span>
+      <div class="step-title">Get Certified</div>
+      <div class="step-desc">Pass your assessments and receive your internationally recognized TEFL/TESOL certificate — a passport to global classrooms.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <span class="step-icon">✈️</span>
+      <div class="step-title">Teach & Travel</div>
+      <div class="step-desc">Our placement team matches you with the right school in the right country. Pack your bags — adventure awaits.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <span class="section-label">Graduate Stories</span>
+    <h2 class="section-title">Real people, <em>real classrooms</em></h2>
+    <p style="font-size:1rem; color:var(--gray); line-height:1.7; margin-top:1rem;">Hear from Orbit graduates now teaching and living their dream abroad.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="tcard">
+      <div class="tcard-flag">🇯🇵</div>
+      <div class="tcard-text">Orbit didn't just give me a certificate — they gave me the confidence and support to actually move to Japan. I've been teaching in Tokyo for two years now and I couldn't be happier. The placement team was incredible.</div>
+      <div class="tcard-author">
+        <div class="tcard-avatar av-teal">J</div>
+        <div>
+          <div class="tcard-name">Jessica M.</div>
+          <div class="tcard-where">Teaching in Tokyo, Japan 🇯🇵</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🇰🇷</div>
+      <div class="tcard-text">I was nervous about teaching abroad with no experience. The TEFL Pro program built my skills from the ground up. Within 3 months of graduating, I had a job offer in South Korea with housing included.</div>
+      <div class="tcard-author">
+        <div class="tcard-avatar av-navy">D</div>
+        <div>
+          <div class="tcard-name">Daniel R.</div>
+          <div class="tcard-where">Teaching in Seoul, South Korea 🇰🇷</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-flag">🇪🇸</div>
+      <div class="tcard-text">The TESOL Master track was worth every penny. The business English specialization opened doors I didn't even know existed. I'm now teaching corporate clients in Madrid and loving every second.</div>
+      <div class="tcard-author">
+        <div class="tcard-avatar av-gold">A</div>
+        <div>
+          <div class="tcard-name">Amara K.</div>
+          <div class="tcard-where">Teaching in Madrid, Spain 🇪🇸</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div style="display:grid; grid-template-columns:repeat(4,1fr); background:var(--navy); color:white; border-top:3px solid var(--gold);">
+  <div style="padding:3rem 5vw; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:700; color:var(--gold-light);">1,200+</div>
+    <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:0.3rem;">Graduates</div>
+  </div>
+  <div style="padding:3rem 5vw; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:700; color:var(--gold-light);">40+</div>
+    <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:0.3rem;">Countries</div>
+  </div>
+  <div style="padding:3rem 5vw; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:700; color:var(--gold-light);">94%</div>
+    <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:0.3rem;">Placement Rate</div>
+  </div>
+  <div style="padding:3rem 5vw; text-align:center;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:700; color:var(--gold-light);">4.9★</div>
+    <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:0.3rem;">Graduate Rating</div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<section class="cta-section">
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <div class="cta-eyebrow">Your next chapter starts here</div>
+  <div class="cta-title">Ready to <em>orbit</em> the world?</div>
+  <div class="cta-sub">Join the Orbit Teaching Academy community. Get certified, find your classroom, and transform lives — including your own.</div>
+  <div class="cta-tagline">Your Certification. Your Passport. Your Future.</div>
+  <div class="cta-actions">
+    <a href="celta.html" class="btn-gold">Explore the Training →</a>
+    <a href="#register" class="btn-outline">Register Your Interest</a>
+  </div>
+</section>
+
+<!-- REGISTER INTEREST FORM -->
+<section id="register" style="padding:7rem 5vw; background:var(--off-white);">
+  <div style="max-width:780px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:3.5rem;">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Register your <em>interest</em></h2>
+      <p style="font-size:1rem; color:var(--gray); line-height:1.8; margin-top:1rem; max-width:520px; margin-left:auto; margin-right:auto;">Be among the first to hear when enrolment opens. Fill in your details and we'll be in touch with everything you need to know.</p>
+    </div>
+
+    <!-- Form card -->
+    <div style="background:var(--white); border-radius:8px; border:1px solid var(--gray-light); box-shadow:0 8px 40px rgba(27,44,94,0.08); overflow:hidden;">
+
+      <!-- Form header bar -->
+      <div style="height:5px; background:linear-gradient(90deg, var(--navy), var(--teal), var(--gold));"></div>
+
+      <div style="padding:3rem 3.5rem;" id="form-wrap">
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">First Name *</label>
+            <input id="f-first" type="text" placeholder="Jane" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Last Name *</label>
+            <input id="f-last" type="text" placeholder="Smith" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Email Address *</label>
+          <input id="f-email" type="email" placeholder="jane@example.com" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Phone Number</label>
+            <input id="f-phone" type="tel" placeholder="+1 000 000 0000" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Country of Residence</label>
+            <input id="f-country" type="text" placeholder="e.g. United States" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Where Would You Like to Teach?</label>
+          <select id="f-dest" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; background:white; appearance:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'">
+            <option value="" disabled selected>Select a region or country...</option>
+            <option>Asia (Japan, South Korea, China, Thailand...)</option>
+            <option>Europe (Spain, Italy, France, Germany...)</option>
+            <option>Latin America (Brazil, Colombia, Mexico...)</option>
+            <option>Middle East (UAE, Saudi Arabia, Qatar...)</option>
+            <option>Africa</option>
+            <option>Anywhere — I'm open to all destinations!</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Do you have any prior teaching experience?</label>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.75rem;">
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.92rem; color:var(--navy-deep);">
+              <input type="radio" name="experience" value="none" style="accent-color:var(--teal);"/> No experience
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.92rem; color:var(--navy-deep);">
+              <input type="radio" name="experience" value="some" style="accent-color:var(--teal);"/> Some experience
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.92rem; color:var(--navy-deep);">
+              <input type="radio" name="experience" value="qualified" style="accent-color:var(--teal);"/> Currently teaching
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-bottom:2rem;">
+          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Anything else you'd like us to know?</label>
+          <textarea id="f-message" rows="4" placeholder="Tell us about your goals, questions, or timeline..." style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; resize:vertical; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"></textarea>
+        </div>
+
+        <!-- Error message -->
+        <div id="form-error" style="display:none; background:#FEF2F2; border:1px solid #FECACA; border-radius:4px; padding:0.85rem 1rem; color:#B91C1C; font-size:0.88rem; margin-bottom:1.2rem;">
+          Please fill in all required fields (First Name, Last Name, and Email).
+        </div>
+
+        <button onclick="submitForm()" style="width:100%; background:var(--navy); color:white; border:none; padding:1.1rem; border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='var(--teal)'" onmouseout="this.style.background='var(--navy)'">
+          Register My Interest →
+        </button>
+
+        <p style="font-size:0.78rem; color:var(--gray); text-align:center; margin-top:1rem;">🔒 We respect your privacy. No spam — ever. Unsubscribe at any time.</p>
+
+      </div>
+
+      <!-- Success state (hidden by default) -->
+      <div id="form-success" style="display:none; padding:4rem 3.5rem; text-align:center;">
+        <div style="font-size:3.5rem; margin-bottom:1.2rem;">🌍</div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">You're on the list!</h3>
+        <p style="font-size:1rem; color:var(--gray); line-height:1.8; max-width:400px; margin:0 auto 1.5rem;">Thank you for registering your interest in Orbit Teaching Academy. We'll be in touch as soon as enrolment opens.</p>
+        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--teal); font-size:1.1rem;">Your Certification. Your Passport. Your Future.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function submitForm() {
+  const first = document.getElementById('f-first').value.trim();
+  const last  = document.getElementById('f-last').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const errorEl = document.getElementById('form-error');
+
+  // Basic validation
+  if (!first || !last || !email || !email.includes('@')) {
+    errorEl.style.display = 'block';
+    return;
+  }
+  errorEl.style.display = 'none';
+
+  // Show success state
+  document.getElementById('form-wrap').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+
+  // Scroll to success message
+  document.getElementById('register').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-top">
+    <div>
+      <div class="nav-logo">
+        <div class="logo-icon">🌍</div>
+        <div class="logo-text">
+          <strong style="color:white">ORBIT</strong>
+          <span>Teaching Academy</span>
+        </div>
+      </div>
+      <p class="footer-brand-desc">Empowering educators to get certified, teach internationally, and transform lives — one classroom at a time.</p>
+      <div class="footer-tagline">Your Certification. Your Passport. Your Future.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Training</h4>
+      <ul>
+        <li><a href="celta.html">The CELTA Programme</a></li>
+        <li><a href="celta.html#what-you-learn">What You'll Learn</a></li>
+        <li><a href="celta.html#outcomes">Graduate Outcomes</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#destinations">Where You Can Teach</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <ul>
+        <li><a href="japan.html">Japan</a></li>
+        <li><a href="korea.html">South Korea</a></li>
+        <li><a href="spain.html">Spain</a></li>
+        <li><a href="brazil.html">Brazil</a></li>
+        <li><a href="#">View All Countries</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Graduate Stories</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Orbit Teaching Academy. All rights reserved.</span>
+    <span>Get Certified. Teach. Travel. Transform Lives.</span>
+  </div>
+</footer>
+
+</body>
+</html>

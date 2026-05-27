@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teach English in Spain — Orbit Teaching Academy</title>
+  <meta name="description" content="Everything you need to know about living and teaching English in Spain — cost of living, culture, visas, salary, and moving tips."/>
+  <link rel="canonical" href="https://www.orbitteachingacademy.com/spain.html"/>
+  <meta property="og:title" content="Teach English in Spain — Orbit Teaching Academy"/>
+  <meta property="og:url" content="https://www.orbitteachingacademy.com/spain.html"/>
+  <meta property="og:type" content="website"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1B2C5E; --navy-deep: #111E42; --teal: #3A9B9B;
+      --teal-light: #5BBFBF; --teal-pale: #EAF7F7; --gold: #C8922A;
+      --gold-light: #E8B94F; --white: #FFFFFF; --off-white: #F7FBFB;
+      --gray: #6B7A99; --gray-light: #E8EDF5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--white); color: var(--navy-deep); overflow-x: hidden; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.6rem 5vw; background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px); border-bottom: 1px solid rgba(58,155,155,0.15);
+      box-shadow: 0 2px 20px rgba(27,44,94,0.06);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta {
+      background: var(--gold); color: var(--white); padding: 0.65rem 1.5rem;
+      border-radius: 3px; font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); color: var(--navy); }
+
+    /* HERO */
+    .country-hero {
+      min-height: 60vh; background: var(--navy-deep);
+      display: flex; align-items: center; padding: 10rem 5vw 5rem;
+      position: relative; overflow: hidden;
+    }
+    .country-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(17,30,66,0.95) 40%, rgba(58,155,155,0.2) 100%);
+    }
+    .hero-bg-flag {
+      position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+      font-size: 18rem; opacity: 0.08; pointer-events: none; z-index: 1;
+    }
+    .country-hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; color: rgba(255,255,255,0.5);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .hero-flag { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .country-hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 1rem;
+    }
+    .country-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: var(--teal-light); margin-bottom: 1.5rem; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 580px; margin-bottom: 2rem; }
+    .hero-stats {
+      display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 2rem;
+      padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--gold-light); display: block; }
+    .hstat-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+    /* SECTIONS */
+    .section { padding: 5rem 5vw; }
+    .section.alt { background: var(--off-white); }
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--teal); display: block; margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700; line-height: 1.1; margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--teal); }
+    .section-body { font-size: 1rem; line-height: 1.8; color: var(--gray); margin-bottom: 1rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .four-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+
+    /* CARDS */
+    .info-card {
+      background: var(--white); border: 1px solid var(--gray-light);
+      border-radius: 6px; padding: 1.8rem;
+      border-top: 3px solid var(--teal);
+    }
+    .info-card.gold { border-top-color: var(--gold); }
+    .info-card.navy { border-top-color: var(--navy); }
+    .card-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .card-body { font-size: 0.88rem; line-height: 1.7; color: var(--gray); }
+
+    /* FACT BOX */
+    .fact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .fact-item {
+      background: var(--white); border: 1px solid var(--gray-light);
+      border-radius: 6px; padding: 1.2rem 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+    }
+    .fact-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .fact-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
+    .fact-value { font-size: 0.95rem; font-weight: 600; color: var(--navy-deep); margin-top: 0.2rem; }
+
+    /* COST TABLE */
+    .cost-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+    .cost-table th {
+      background: var(--navy); color: white; padding: 0.85rem 1.2rem;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      text-align: left;
+    }
+    .cost-table td { padding: 0.85rem 1.2rem; border-bottom: 1px solid var(--gray-light); font-size: 0.92rem; color: var(--navy-deep); }
+    .cost-table tr:last-child td { border-bottom: none; }
+    .cost-table tr:nth-child(even) td { background: var(--off-white); }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+      padding: 4rem 5vw; text-align: center; color: white;
+    }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .cta-band h2 em { font-style: italic; color: var(--gold-light); }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
+    .btn-gold {
+      background: var(--gold); color: white; padding: 1rem 2.2rem; border-radius: 3px;
+      font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase;
+      text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline-light {
+      background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3);
+      padding: 1rem 2.2rem; border-radius: 3px; font-weight: 500; font-size: 0.9rem;
+      text-decoration: none; display: inline-block; margin-left: 1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline-light:hover { border-color: var(--teal-light); background: rgba(58,155,155,0.1); }
+
+    /* FOOTER */
+    footer { background: #0C1528; color: white; padding: 3rem 5vw; }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.78rem; color: rgba(255,255,255,0.3);
+    }
+    .footer-bottom a { color: var(--teal-light); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+
+    /* FAQ */
+    .faq-section { padding: 5.5rem 5vw; background: var(--white); }
+    .faq-section.alt { background: var(--off-white); }
+    .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--gray-light); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 0; gap: 1.5rem; text-align: left;
+    }
+    .faq-question-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 700; color: var(--navy); line-height: 1.3;
+    }
+    .faq-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--teal-pale); color: var(--teal);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 300; flex-shrink: 0;
+      transition: background 0.2s, transform 0.3s;
+    }
+    .faq-item.open .faq-icon { background: var(--teal); color: white; transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      font-size: 0.95rem; color: var(--gray); line-height: 1.8;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 1.4rem; }
+
+  
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 900px) {
+      /* NAV */
+      nav {
+        padding: 0.75rem 5vw;
+        flex-wrap: wrap; gap: 0.5rem;
+      }
+      .nav-links { display: none; }
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.8rem; }
+
+      /* HERO */
+      .hero {
+        grid-template-columns: 1fr !important;
+        padding: 7rem 5vw 3rem !important;
+        min-height: auto !important;
+        gap: 2rem !important;
+      }
+      .hero-image-wrap { display: none; }
+      .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem) !important; }
+      .hero-sub { font-size: 1rem !important; }
+      .hero-actions { flex-direction: column; gap: 0.75rem; }
+      .hero-actions a { text-align: center; padding: 0.9rem 1.5rem; }
+      .hero-badge { font-size: 0.7rem; }
+      .hero-stats { gap: 1.2rem; }
+      .hstat-num { font-size: 1.6rem; }
+
+      /* PILLARS */
+      .pillars { grid-template-columns: 1fr 1fr !important; }
+      .pillar { padding: 1.2rem; }
+      .pillar-icon { font-size: 1.4rem; }
+
+      /* ABOUT */
+      .about {
+        grid-template-columns: 1fr !important;
+        padding: 4rem 5vw !important;
+        gap: 3rem !important;
+      }
+      .about-visual { display: none; }
+
+      /* STATS ROW */
+      div[style*="grid-template-columns:repeat(4,1fr)"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* SECTIONS */
+      .section { padding: 3.5rem 5vw !important; }
+      .section-header { margin-bottom: 2.5rem !important; }
+      .section-title { font-size: clamp(1.8rem, 6vw, 2.5rem) !important; }
+      .two-col { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .three-col { grid-template-columns: 1fr !important; gap: 1rem !important; }
+      .four-col { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+
+      /* DESTINATIONS */
+      .dest-grid { grid-template-columns: 1fr 1fr !important; }
+      .dest-card { aspect-ratio: 1/1 !important; }
+
+      /* HOW IT WORKS */
+      .steps {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .steps::before { display: none; }
+      .step:not(:last-child)::after { display: none; }
+
+      /* TESTIMONIALS */
+      .testimonials-grid { grid-template-columns: 1fr !important; }
+
+      /* CTA SECTION */
+      .cta-section { padding: 4rem 5vw !important; }
+      .cta-title { font-size: clamp(2rem, 7vw, 3rem) !important; }
+      .cta-actions { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .cta-actions a { width: 100%; max-width: 320px; text-align: center; }
+
+      /* REGISTER FORM */
+      div[style*="grid-template-columns:1fr 1fr"][style*="gap:1.5rem"] {
+        grid-template-columns: 1fr !important;
+      }
+      div[style*="padding:3rem 3.5rem"] { padding: 1.5rem !important; }
+
+      /* FOOTER */
+      .footer-top {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem; text-align: center;
+      }
+
+      /* SCHEDULE GRID */
+      .schedule-grid { grid-template-columns: 1fr !important; }
+
+      /* FEES */
+      .fees-grid { grid-template-columns: 1fr !important; }
+
+      /* LEARN GRID */
+      .learn-grid { grid-template-columns: 1fr !important; }
+
+      /* APPLY STEPS */
+      .apply-step { grid-template-columns: 50px 1fr !important; gap: 1rem !important; }
+      .step-num-box { width: 48px !important; height: 48px !important; font-size: 1.3rem !important; }
+      .apply-step:not(:last-child) .step-num-box::after { display: none; }
+
+      /* FAQ */
+      .faq-question-text { font-size: 1rem !important; }
+
+      /* COUNTRY HERO */
+      .country-hero { padding: 8rem 5vw 3rem !important; min-height: auto !important; }
+      .country-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem) !important; }
+      .hero-stats { flex-wrap: wrap; gap: 1rem; }
+      .fact-grid { grid-template-columns: 1fr 1fr !important; }
+
+      /* COST TABLE */
+      .cost-table { font-size: 0.8rem !important; display: block; overflow-x: auto; }
+
+      /* PAGE HERO */
+      .page-hero { padding: 8rem 5vw 3rem !important; min-height: auto !important; }
+      .page-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem) !important; }
+      .page-nav-pills { gap: 0.4rem; }
+      .pill { font-size: 0.75rem !important; padding: 0.4rem 0.8rem !important; }
+
+      /* WHO IS IT FOR dark box */
+      div[style*="grid-template-columns:1fr 1fr"][style*="padding:4rem 5rem"] {
+        grid-template-columns: 1fr !important;
+        padding: 2rem !important;
+      }
+
+      /* INTRO STATS GRID */
+      div[style*="grid-template-columns:1fr 1fr"][style*="gap:1rem"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Extra small screens */
+      .pillars { grid-template-columns: 1fr 1fr !important; }
+      .dest-grid { grid-template-columns: 1fr 1fr !important; }
+      .steps { grid-template-columns: 1fr !important; }
+      .four-col { grid-template-columns: 1fr !important; }
+      .footer-top { grid-template-columns: 1fr !important; }
+      .hero h1 { font-size: 2rem !important; }
+      .page-hero h1, .country-hero h1 { font-size: 2.2rem !important; }
+      .nav-logo img { height: 52px !important; }
+      div[style*="padding:3rem 3.5rem"] { padding: 1.2rem !important; }
+      .cost-table th, .cost-table td { padding: 0.4rem 0.5rem !important; font-size: 0.75rem !important; }
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Orbit Teaching Academy" style="height:56px; width:auto; display:block; max-width:220px; object-fit:contain;"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+    <div style="display:none; align-items:center; gap:0.5rem;">
+      <div style="width:40px; height:40px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">🌍</div>
+      <div>
+        <strong style="display:block; font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy);">ORBIT</strong>
+        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching Academy</span>
+      </div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#training">The Training</a></li>
+    <li><a href="index.html#outcomes">Outcomes</a></li>
+    <li><a href="index.html#destinations">Destinations</a></li>
+    <li><a href="index.html#testimonials">Stories</a></li>
+  </ul>
+  <a href="register.html" class="nav-cta">Register Interest</a>
+</nav>
+
+<section class="country-hero">
+  <div class="hero-bg-flag">🇪🇸</div>
+  <div class="country-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> › <a href="index.html#destinations">Destinations</a> › Spain</div>
+    <span class="hero-flag">🇪🇸</span>
+    <h1>Teach English<br/>in <em>Spain</em></h1>
+    <div class="hero-tagline">Sun, culture, and a passion for language.</div>
+    <p class="hero-sub">Spain offers one of Europe's most vibrant lifestyles for English teachers — warm weather, incredible food, rich history, and a culture that truly celebrates living. With strong demand for English in schools, academies, and businesses, it's one of Europe's top teaching destinations.</p>
+    <div class="hero-stats">
+      <div><span class="hstat-num">1,800+</span><span class="hstat-label">Open Positions</span></div>
+      <div><span class="hstat-num">€1,200</span><span class="hstat-label">Avg Monthly Salary</span></div>
+      <div><span class="hstat-num">47M</span><span class="hstat-label">Population</span></div>
+      <div><span class="hstat-num">300+</span><span class="hstat-label">Days of Sunshine/Year</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="two-col">
+    <div>
+      <span class="section-label">Quick Facts</span>
+      <h2 class="section-title">Spain at a <em>glance</em></h2>
+      <p class="section-body">Spain is a country of contrasts — cosmopolitan Madrid, beach-perfect Barcelona, the white villages of Andalusia, the green hills of the Basque Country. For English teachers, this diversity means you can tailor your experience significantly based on where you choose to live.</p>
+      <p class="section-body">English demand is driven by businesses, international schools, language academies (academias de idiomas), and government auxiliary teacher programmes. Spain is particularly known for its work-life balance and welcoming attitude toward foreign teachers.</p>
+    </div>
+    <div class="fact-grid">
+      <div class="fact-item"><div class="fact-icon">🏛️</div><div><div class="fact-label">Capital</div><div class="fact-value">Madrid</div></div></div>
+      <div class="fact-item"><div class="fact-icon">💶</div><div><div class="fact-label">Currency</div><div class="fact-value">Euro (€)</div></div></div>
+      <div class="fact-item"><div class="fact-icon">🌐</div><div><div class="fact-label">Language</div><div class="fact-value">Spanish (Castilian)</div></div></div>
+      <div class="fact-item"><div class="fact-icon">🕐</div><div><div class="fact-label">Time Zone</div><div class="fact-value">CET (UTC+1)</div></div></div>
+      <div class="fact-item"><div class="fact-icon">✈️</div><div><div class="fact-label">Flight from NYC</div><div class="fact-value">~8 hours</div></div></div>
+      <div class="fact-item"><div class="fact-icon">🌡️</div><div><div class="fact-label">Climate</div><div class="fact-value">Mediterranean / semi-arid</div></div></div>
+      <div class="fact-item"><div class="fact-icon">🏥</div><div><div class="fact-label">Healthcare</div><div class="fact-value">Excellent public system</div></div></div>
+      <div class="fact-item"><div class="fact-icon">🚄</div><div><div class="fact-label">Transport</div><div class="fact-value">Excellent AVE rail network</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="section-label">Cost of Living</span>
+  <h2 class="section-title">What does life in Spain <em>actually cost?</em></h2>
+  <p class="section-body" style="max-width:680px">Spain is significantly more affordable than the UK, France, or Germany, making a teacher's salary very liveable — especially in smaller cities like Seville, Valencia, or Granada where costs are lower and quality of life is high.</p>
+  <table class="cost-table">
+    <thead><tr><th>Expense</th><th>Madrid / Barcelona</th><th>Seville / Valencia</th></tr></thead>
+    <tbody>
+      <tr><td>🏠 Rent (1-bedroom)</td><td>€900–€1,400</td><td>€550–€900</td></tr>
+      <tr><td>🍽️ Food (groceries + eating out)</td><td>€300–€450</td><td>€250–€380</td></tr>
+      <tr><td>🚇 Transport</td><td>€55–€80</td><td>€30–€55</td></tr>
+      <tr><td>📱 Phone & utilities</td><td>€80–€120</td><td>€70–€100</td></tr>
+      <tr><td>🎭 Entertainment & social</td><td>€150–€250</td><td>€100–€180</td></tr>
+      <tr><td><strong>Total estimate</strong></td><td><strong>€1,485–€2,300</strong></td><td><strong>€1,000–€1,615</strong></td></tr>
+    </tbody>
+  </table>
+  <p class="section-body" style="margin-top:1.2rem; font-size:0.88rem; color:var(--gray)">Average language academy salary: €1,000–€1,500/month. Government auxiliary programmes pay around €700–€1,000/month but often offer reduced hours.</p>
+</section>
+
+<section class="section alt">
+  <span class="section-label">Living in Spain</span>
+  <h2 class="section-title">What to expect when you <em>arrive</em></h2>
+  <div class="three-col" style="margin-top:2rem">
+    <div class="info-card">
+      <div class="card-icon">🏠</div>
+      <div class="card-title">Finding Accommodation</div>
+      <div class="card-body">Shared flats (pisos compartidos) are the norm for teachers, especially in larger cities. Platforms like Idealista and Fotocasa are widely used. Expect to pay a month's deposit. Many teachers arrive and stay in a hostel for the first week while flat-hunting in person.</div>
+    </div>
+    <div class="info-card gold">
+      <div class="card-icon">🥘</div>
+      <div class="card-title">Food & Culture</div>
+      <div class="card-body">Spanish food culture is extraordinary — tapas, paella, jamón, fresh seafood, and incredible markets. Lunch is the main meal (often subsidised at work via a menú del día for €10–€12). Dinner is late — 9pm or 10pm is completely normal. Life is lived outdoors and socially.</div>
+    </div>
+    <div class="info-card navy">
+      <div class="card-icon">🚇</div>
+      <div class="card-title">Getting Around</div>
+      <div class="card-body">Madrid and Barcelona have excellent metro systems. Spain's AVE high-speed trains connect major cities quickly. In smaller cities, buses are the main option. Many teachers find a bicycle or scooter invaluable for daily commuting. Driving is straightforward outside city centres.</div>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🏥</div>
+      <div class="card-title">Healthcare</div>
+      <div class="card-body">Spain has a world-class public healthcare system. Once registered as a resident (empadronamiento), you can access public healthcare. Private insurance is inexpensive and widely used by expats. Pharmacies (farmacias) are abundant and pharmacists can advise on minor ailments.</div>
+    </div>
+    <div class="info-card gold">
+      <div class="card-icon">☀️</div>
+      <div class="card-title">Lifestyle & Weather</div>
+      <div class="card-body">Spain's lifestyle is famously relaxed and enjoyable. Warm weather for much of the year, beautiful beaches, mountains, historic cities, and festivals make weekends and holidays genuinely exciting. The Spanish siesta culture is alive in smaller towns and adds a pleasant rhythm to the day.</div>
+    </div>
+    <div class="info-card navy">
+      <div class="card-icon">🤝</div>
+      <div class="card-title">Social Life</div>
+      <div class="card-body">Spaniards are warm and sociable, and there's a huge international teaching community across the country. Language exchange events (intercambios) are a brilliant way to meet locals and improve your Spanish. Most cities have active Facebook and WhatsApp groups for teachers and expats.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="section-label">Visas & Entry</span>
+  <h2 class="section-title">How to get your <em>work visa</em> for Spain</h2>
+  <div class="two-col">
+    <div>
+      <p class="section-body">EU/EEA citizens can work in Spain freely without a visa. Non-EU citizens (including Americans, Canadians, Australians, and British citizens post-Brexit) need a work visa or can enter on a tourist visa and apply for a student/work visa from within Spain via specific programmes.</p>
+      <p class="section-body">The most popular route for non-EU teachers is the <strong>Language and Culture Auxiliaries Programme</strong>, which provides a legal framework, a monthly stipend, and relatively straightforward entry.</p>
+      <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem;">
+        <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.92rem; color:var(--navy-deep)"><span style="background:var(--teal); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; font-weight:700">1</span> Apply to auxiliary programme or secure private school offer</div>
+        <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.92rem; color:var(--navy-deep)"><span style="background:var(--teal); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; font-weight:700">2</span> Gather documents (degree, background check, medical cert)</div>
+        <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.92rem; color:var(--navy-deep)"><span style="background:var(--teal); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; font-weight:700">3</span> Apply at Spanish consulate in your home country</div>
+        <div style="display:flex; align-items:center; gap:0.8rem; font-size:0.92rem; color:var(--navy-deep)"><span style="background:var(--teal); color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; font-weight:700">4</span> Register as resident (empadronamiento) on arrival</div>
+      </div>
+    </div>
+    <div style="background:var(--navy-deep); border-radius:8px; padding:2.5rem; color:white;">
+      <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--teal-light); margin-bottom:1rem;">Key Requirements</div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem;">
+        <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8)"><span style="color:var(--gold-light)">✓</span> Bachelor's degree (any subject)</li>
+        <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8)"><span style="color:var(--gold-light)">✓</span> Native or near-native English speaker</li>
+        <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8)"><span style="color:var(--gold-light)">✓</span> Clean criminal record (apostilled)</li>
+        <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8)"><span style="color:var(--gold-light)">✓</span> Medical certificate</li>
+        <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8)"><span style="color:var(--gold-light)">✓</span> Valid passport (6+ months validity)</li>
+        <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8)"><span style="color:var(--gold-light)">✓</span> CELTA qualification (strongly preferred)</li>
+      </ul>
+      <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.1); font-size:0.82rem; color:rgba(255,255,255,0.45)">Processing time: 1–3 months. Apply well in advance of your intended start date.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Ready to teach in <em>Spain</em>?</h2>
+  <p>Get your Cambridge CELTA certification with Orbit Teaching Academy and we'll help you land your first teaching role.</p>
+  <a href="register.html" class="btn-gold">Register Your Interest →</a>
+  <a href="index.html#destinations" class="btn-outline-light">Explore Other Countries</a>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Orbit Teaching Academy · <a href="index.html">Back to Home</a></span>
+    <span>Get Certified. Teach. Travel. Transform Lives.</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
