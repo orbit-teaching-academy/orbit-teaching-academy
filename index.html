@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,11 +47,11 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 5vw;
-      background: rgba(255,255,255,0.95);
+      padding: 0.6rem 5vw;
+      background: rgba(27,44,94,0.98);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(58,155,155,0.15);
-      box-shadow: 0 2px 20px rgba(27,44,94,0.06);
+      border-bottom: 1px solid rgba(58,155,155,0.25);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
     }
     .nav-logo {
       display: flex; align-items: center; gap: 0.75rem;
@@ -84,19 +85,19 @@
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
-      text-decoration: none; color: var(--navy);
+      text-decoration: none; color: rgba(255,255,255,0.8);
       font-size: 0.88rem; font-weight: 500;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--teal); }
+    .nav-links a:hover { color: var(--teal-light); }
     .nav-cta {
-      background: var(--navy); color: var(--white);
+      background: var(--gold); color: var(--white);
       padding: 0.65rem 1.5rem; border-radius: 3px;
       font-size: 0.85rem; font-weight: 600;
       text-decoration: none; letter-spacing: 0.04em;
       transition: background 0.2s, transform 0.2s;
     }
-    .nav-cta:hover { background: var(--teal); transform: translateY(-1px); }
+    .nav-cta:hover { background: var(--gold-light); color: var(--navy); transform: translateY(-1px); }
 
     /* ── HERO ── */
     .hero {
@@ -113,11 +114,22 @@
       opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
     }
     .hero-image-wrap img {
-      width: 100%; height: 520px;
-      object-fit: cover; object-position: center;
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      max-height: 580px;
+      object-fit: cover;
+      object-position: center center;
       border-radius: 8px;
       box-shadow: 0 24px 80px rgba(0,0,0,0.4);
       border: 2px solid rgba(58,155,155,0.2);
+      display: block;
+    }
+    .hero-image-wrap {
+      position: relative; z-index: 1;
+      align-self: stretch;
+      display: flex; flex-direction: column;
+      opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
     }
     .hero-image-wrap::before {
       content: '';
@@ -546,6 +558,154 @@
       from { transform: rotate(0deg); }
       to   { transform: rotate(360deg); }
     }
+  
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 900px) {
+      /* NAV */
+      nav {
+        padding: 0.75rem 5vw;
+        flex-wrap: wrap; gap: 0.5rem;
+      }
+      .nav-links { display: none; }
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.8rem; }
+
+      /* HERO */
+      .hero {
+        grid-template-columns: 1fr !important;
+        padding: 7rem 5vw 3rem !important;
+        min-height: auto !important;
+        gap: 2rem !important;
+      }
+      .hero-image-wrap { display: none; }
+      .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem) !important; }
+      .hero-sub { font-size: 1rem !important; }
+      .hero-actions { flex-direction: column; gap: 0.75rem; }
+      .hero-actions a { text-align: center; padding: 0.9rem 1.5rem; }
+      .hero-badge { font-size: 0.7rem; }
+      .hero-stats { gap: 1.2rem; }
+      .hstat-num { font-size: 1.6rem; }
+
+      /* PILLARS */
+      .pillars { grid-template-columns: 1fr 1fr !important; }
+      .pillar { padding: 1.2rem; }
+      .pillar-icon { font-size: 1.4rem; }
+
+      /* ABOUT */
+      .about {
+        grid-template-columns: 1fr !important;
+        padding: 4rem 5vw !important;
+        gap: 3rem !important;
+      }
+      .about-visual { display: none; }
+
+      /* STATS ROW */
+      div[style*="grid-template-columns:repeat(4,1fr)"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* SECTIONS */
+      .section { padding: 3.5rem 5vw !important; }
+      .section-header { margin-bottom: 2.5rem !important; }
+      .section-title { font-size: clamp(1.8rem, 6vw, 2.5rem) !important; }
+      .two-col { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .three-col { grid-template-columns: 1fr !important; gap: 1rem !important; }
+      .four-col { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+
+      /* DESTINATIONS */
+      .dest-grid { grid-template-columns: 1fr 1fr !important; }
+      .dest-card { aspect-ratio: 1/1 !important; }
+
+      /* HOW IT WORKS */
+      .steps {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .steps::before { display: none; }
+      .step:not(:last-child)::after { display: none; }
+
+      /* TESTIMONIALS */
+      .testimonials-grid { grid-template-columns: 1fr !important; }
+
+      /* CTA SECTION */
+      .cta-section { padding: 4rem 5vw !important; }
+      .cta-title { font-size: clamp(2rem, 7vw, 3rem) !important; }
+      .cta-actions { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .cta-actions a { width: 100%; max-width: 320px; text-align: center; }
+
+      /* REGISTER FORM */
+      div[style*="grid-template-columns:1fr 1fr"][style*="gap:1.5rem"] {
+        grid-template-columns: 1fr !important;
+      }
+      div[style*="padding:3rem 3.5rem"] { padding: 1.5rem !important; }
+
+      /* FOOTER */
+      .footer-top {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem; text-align: center;
+      }
+
+      /* SCHEDULE GRID */
+      .schedule-grid { grid-template-columns: 1fr !important; }
+
+      /* FEES */
+      .fees-grid { grid-template-columns: 1fr !important; }
+
+      /* LEARN GRID */
+      .learn-grid { grid-template-columns: 1fr !important; }
+
+      /* APPLY STEPS */
+      .apply-step { grid-template-columns: 50px 1fr !important; gap: 1rem !important; }
+      .step-num-box { width: 48px !important; height: 48px !important; font-size: 1.3rem !important; }
+      .apply-step:not(:last-child) .step-num-box::after { display: none; }
+
+      /* FAQ */
+      .faq-question-text { font-size: 1rem !important; }
+
+      /* COUNTRY HERO */
+      .country-hero { padding: 8rem 5vw 3rem !important; min-height: auto !important; }
+      .country-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem) !important; }
+      .hero-stats { flex-wrap: wrap; gap: 1rem; }
+      .fact-grid { grid-template-columns: 1fr 1fr !important; }
+
+      /* COST TABLE */
+      .cost-table { font-size: 0.8rem !important; display: block; overflow-x: auto; }
+
+      /* PAGE HERO */
+      .page-hero { padding: 8rem 5vw 3rem !important; min-height: auto !important; }
+      .page-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem) !important; }
+      .page-nav-pills { gap: 0.4rem; }
+      .pill { font-size: 0.75rem !important; padding: 0.4rem 0.8rem !important; }
+
+      /* WHO IS IT FOR dark box */
+      div[style*="grid-template-columns:1fr 1fr"][style*="padding:4rem 5rem"] {
+        grid-template-columns: 1fr !important;
+        padding: 2rem !important;
+      }
+
+      /* INTRO STATS GRID */
+      div[style*="grid-template-columns:1fr 1fr"][style*="gap:1rem"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Extra small screens */
+      .pillars { grid-template-columns: 1fr 1fr !important; }
+      .dest-grid { grid-template-columns: 1fr 1fr !important; }
+      .steps { grid-template-columns: 1fr !important; }
+      .four-col { grid-template-columns: 1fr !important; }
+      .footer-top { grid-template-columns: 1fr !important; }
+      .hero h1 { font-size: 2rem !important; }
+      .page-hero h1, .country-hero h1 { font-size: 2.2rem !important; }
+      .nav-logo img { height: 52px !important; }
+      div[style*="padding:3rem 3.5rem"] { padding: 1.2rem !important; }
+      .cost-table th, .cost-table td { padding: 0.4rem 0.5rem !important; font-size: 0.75rem !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -553,7 +713,15 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="logo.png" alt="Orbit Teaching Academy" style="height:52px; width:auto; display:block;"/>
+    <img src="logo.png" alt="Orbit Teaching Academy" style="height:72px; width:auto; display:block; max-width:260px; object-fit:contain;"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+    <div style="display:none; align-items:center; gap:0.5rem;">
+      <div style="width:40px; height:40px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">🌍</div>
+      <div>
+        <strong style="display:block; font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--navy);">ORBIT</strong>
+        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching Academy</span>
+      </div>
+    </div>
   </div>
   <ul class="nav-links">
     <li><a href="celta.html">The Training</a></li>
@@ -619,29 +787,6 @@
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about">
-  <div class="about-visual">
-    <div class="about-img-box">🌍</div>
-    <div class="about-stat-float">
-      <div class="float-num">40+</div>
-      <div class="float-label">Countries Our Grads Teach In</div>
-    </div>
-  </div>
-  <div>
-    <span class="section-label">About Orbit</span>
-    <h2 class="section-title">We don't just certify —<br/>we <em>launch careers.</em></h2>
-    <p class="section-body">Orbit Teaching Academy is more than a certification program. We're a launchpad for educators who want to combine their passion for teaching with a desire to see the world and make a lasting impact.</p>
-    <p class="section-body">From our rigorous TEFL/TESOL training to our global job placement support, we walk with you every step of the journey — from your first lesson plan to your first international classroom.</p>
-    <ul class="check-list">
-      <li>Internationally recognized TEFL/TESOL certification</li>
-      <li>Job placement support in 40+ countries</li>
-      <li>Dedicated coach & mentorship throughout</li>
-      <li>Vibrant alumni community across the globe</li>
-      <li>Fully online, self-paced learning options</li>
-    </ul>
-  </div>
-</section>
 
 <!-- TRAINING SECTION -->
 <section id="training" style="padding:7rem 5vw; background:var(--off-white);">
@@ -828,7 +973,7 @@
       </div>
       <div class="dest-overlay"><span>Explore →</span></div>
     </div>
-    <div class="dest-card" onclick="location.href='brazil.html'" style="cursor:pointer">
+    <div class="dest-card" onclick="location.href='teaching-in-brazil.html'" style="cursor:pointer">
       <div class="dest-bg d3">🇧🇷</div>
       <div class="dest-info">
         <div class="dest-country">Latin America</div>
@@ -958,7 +1103,7 @@
   <div class="cta-tagline">Your Certification. Your Passport. Your Future.</div>
   <div class="cta-actions">
     <a href="celta.html" class="btn-gold">Explore the Training →</a>
-    <a href="#register" class="btn-outline">Register Your Interest</a>
+    <a href="register.html" class="btn-outline">Register Your Interest</a>
   </div>
 </section>
 
@@ -1119,14 +1264,14 @@ function submitForm() {
         <li><a href="japan.html">Japan</a></li>
         <li><a href="korea.html">South Korea</a></li>
         <li><a href="spain.html">Spain</a></li>
-        <li><a href="brazil.html">Brazil</a></li>
+        <li><a href="teaching-in-brazil.html">Brazil</a></li>
         <li><a href="#">View All Countries</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <ul>
-        <li><a href="#">About Us</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="#">Graduate Stories</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Contact</a></li>
