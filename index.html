@@ -103,20 +103,26 @@
       min-height: 100vh;
       background: var(--navy-deep);
       position: relative; overflow: hidden;
-      display: flex; flex-direction: column;
-      align-items: stretch;
-      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3rem;
+      padding: 8rem 5vw 5rem;
     }
     .hero-image-wrap {
-      width: 100%;
+      position: relative; z-index: 1;
       opacity: 0; animation: fadeUp 0.9s 0.6s forwards;
-      line-height: 0;
+      display: flex; align-items: center;
     }
     .hero-image-wrap img {
       width: 100%;
       height: auto;
-      display: block;
+      max-height: 600px;
       object-fit: contain;
+      object-position: center;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
     }
     /* Orbiting ring decoration */
     .hero-orb {
@@ -137,7 +143,7 @@
       pointer-events: none;
     }
 
-    .hero-content { position: relative; z-index: 1; max-width: 680px; padding: 8rem 5vw 3rem; }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: rgba(58,155,155,0.15);
@@ -556,7 +562,7 @@
         min-height: auto !important;
         gap: 2rem !important;
       }
-      .hero-image-wrap { display: none; }
+      .hero-image-wrap { display: none !important; }
       .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem) !important; }
       .hero-sub { font-size: 1rem !important; }
       .hero-actions { flex-direction: column; gap: 0.75rem; }
@@ -986,19 +992,19 @@
       <div class="step-num">01</div>
       <span class="step-icon">🎯</span>
       <div class="step-title">Choose Your Program</div>
-      <div class="step-desc">Browse our certification tracks and pick the one that matches your goals, timeline, and experience level.</div>
+      <div class="step-desc">Choose your preferred CELTA format — intensive, part-time evenings, or weekend-only — whichever fits your schedule.</div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <span class="step-icon">💻</span>
       <div class="step-title">Complete Your Training</div>
-      <div class="step-desc">Study online at your own pace. Access video lessons, assignments, and live coaching sessions from anywhere.</div>
+      <div class="step-desc">Complete your Cambridge CELTA training with expert tutors. Input sessions, teaching practice, and detailed feedback every step of the way.</div>
     </div>
     <div class="step">
       <div class="step-num">03</div>
       <span class="step-icon">📜</span>
       <div class="step-title">Get Certified</div>
-      <div class="step-desc">Pass your assessments and receive your internationally recognized TEFL/TESOL certificate — a passport to global classrooms.</div>
+      <div class="step-desc">Pass your assessments and receive your internationally recognised Cambridge CELTA certificate — recognised by employers in 100+ countries.</div>
     </div>
     <div class="step">
       <div class="step-num">04</div>
@@ -1030,7 +1036,7 @@
     </div>
     <div class="tcard">
       <div class="tcard-flag">🇰🇷</div>
-      <div class="tcard-text">I was nervous about teaching abroad with no experience. The TEFL Pro program built my skills from the ground up. Within 3 months of graduating, I had a job offer in South Korea with housing included.</div>
+      <div class="tcard-text">I was nervous about teaching abroad with no experience. The CELTA programme built my skills from the ground up. Within 3 months of graduating, I had a job offer in South Korea with housing included.</div>
       <div class="tcard-author">
         <div class="tcard-avatar av-navy">D</div>
         <div>
@@ -1041,7 +1047,7 @@
     </div>
     <div class="tcard">
       <div class="tcard-flag">🇪🇸</div>
-      <div class="tcard-text">The TESOL Master track was worth every penny. The business English specialization opened doors I didn't even know existed. I'm now teaching corporate clients in Madrid and loving every second.</div>
+      <div class="tcard-text">The CELTA was worth every penny. The training opened doors I didn't even know existed. I'm now teaching corporate clients in Madrid and loving every second.</div>
       <div class="tcard-author">
         <div class="tcard-avatar av-gold">A</div>
         <div>
@@ -1088,108 +1094,7 @@
 </section>
 
 <!-- REGISTER INTEREST FORM -->
-<section id="register" style="padding:7rem 5vw; background:var(--off-white);">
-  <div style="max-width:780px; margin:0 auto;">
 
-    <div style="text-align:center; margin-bottom:3.5rem;">
-      <span class="section-label">Get In Touch</span>
-      <h2 class="section-title">Register your <em>interest</em></h2>
-      <p style="font-size:1rem; color:var(--gray); line-height:1.8; margin-top:1rem; max-width:520px; margin-left:auto; margin-right:auto;">Be among the first to hear when enrolment opens. Fill in your details and we'll be in touch with everything you need to know.</p>
-    </div>
-
-    <!-- Form card -->
-    <div style="background:var(--white); border-radius:8px; border:1px solid var(--gray-light); box-shadow:0 8px 40px rgba(27,44,94,0.08); overflow:hidden;">
-
-      <!-- Form header bar -->
-      <div style="height:5px; background:linear-gradient(90deg, var(--navy), var(--teal), var(--gold));"></div>
-
-      <div style="padding:3rem 3.5rem;" id="form-wrap">
-
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
-          <div>
-            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">First Name *</label>
-            <input id="f-first" type="text" placeholder="Jane" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
-          </div>
-          <div>
-            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Last Name *</label>
-            <input id="f-last" type="text" placeholder="Smith" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
-          </div>
-        </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Email Address *</label>
-          <input id="f-email" type="email" placeholder="jane@example.com" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
-        </div>
-
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
-          <div>
-            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Phone Number</label>
-            <input id="f-phone" type="tel" placeholder="+1 000 000 0000" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
-          </div>
-          <div>
-            <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Country of Residence</label>
-            <input id="f-country" type="text" placeholder="e.g. United States" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"/>
-          </div>
-        </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Where Would You Like to Teach?</label>
-          <select id="f-dest" style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; background:white; appearance:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'">
-            <option value="" disabled selected>Select a region or country...</option>
-            <option>Asia (Japan, South Korea, China, Thailand...)</option>
-            <option>Europe (Spain, Italy, France, Germany...)</option>
-            <option>Latin America (Brazil, Colombia, Mexico...)</option>
-            <option>Middle East (UAE, Saudi Arabia, Qatar...)</option>
-            <option>Africa</option>
-            <option>Anywhere — I'm open to all destinations!</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Do you have any prior teaching experience?</label>
-          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.75rem;">
-            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.92rem; color:var(--navy-deep);">
-              <input type="radio" name="experience" value="none" style="accent-color:var(--teal);"/> No experience
-            </label>
-            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.92rem; color:var(--navy-deep);">
-              <input type="radio" name="experience" value="some" style="accent-color:var(--teal);"/> Some experience
-            </label>
-            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.92rem; color:var(--navy-deep);">
-              <input type="radio" name="experience" value="qualified" style="accent-color:var(--teal);"/> Currently teaching
-            </label>
-          </div>
-        </div>
-
-        <div style="margin-bottom:2rem;">
-          <label style="display:block; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:0.5rem;">Anything else you'd like us to know?</label>
-          <textarea id="f-message" rows="4" placeholder="Tell us about your goals, questions, or timeline..." style="width:100%; padding:0.85rem 1rem; border:1.5px solid var(--gray-light); border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; color:var(--navy-deep); outline:none; resize:vertical; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--gray-light)'"></textarea>
-        </div>
-
-        <!-- Error message -->
-        <div id="form-error" style="display:none; background:#FEF2F2; border:1px solid #FECACA; border-radius:4px; padding:0.85rem 1rem; color:#B91C1C; font-size:0.88rem; margin-bottom:1.2rem;">
-          Please fill in all required fields (First Name, Last Name, and Email).
-        </div>
-
-        <button onclick="submitForm()" style="width:100%; background:var(--navy); color:white; border:none; padding:1.1rem; border-radius:4px; font-family:'Outfit',sans-serif; font-size:0.95rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='var(--teal)'" onmouseout="this.style.background='var(--navy)'">
-          Register My Interest →
-        </button>
-
-        <p style="font-size:0.78rem; color:var(--gray); text-align:center; margin-top:1rem;">🔒 We respect your privacy. No spam — ever. Unsubscribe at any time.</p>
-
-      </div>
-
-      <!-- Success state (hidden by default) -->
-      <div id="form-success" style="display:none; padding:4rem 3.5rem; text-align:center;">
-        <div style="font-size:3.5rem; margin-bottom:1.2rem;">🌍</div>
-        <h3 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:var(--navy); margin-bottom:0.75rem;">You're on the list!</h3>
-        <p style="font-size:1rem; color:var(--gray); line-height:1.8; max-width:400px; margin:0 auto 1.5rem;">Thank you for registering your interest in Orbit Teaching Academy. We'll be in touch as soon as enrolment opens.</p>
-        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--teal); font-size:1.1rem;">Your Certification. Your Passport. Your Future.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <script>
 function submitForm() {
