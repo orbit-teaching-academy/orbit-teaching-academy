@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Examination Testing Services — Orbit Teaching &amp; Testing Academy</title>
+  <meta name="description" content="Orbit Teaching &amp; Testing Academy offers Cambridge University examination testing services including FCE, CAE, CPE and more, plus bespoke assessments and professional admissions testing including BMAT, IMAT, TMUA, ESAT, TARA, UCAT and LNAT — based in Philadelphia and New York."/>
+  <link rel="canonical" href="https://www.orbitteachingacademy.com/examinations.html"/>
+  <meta property="og:title" content="Examination Testing Services — Orbit Teaching &amp; Testing Academy"/>
+  <meta property="og:description" content="Cambridge University examinations, bespoke assessments, and professional admissions testing — delivered by Orbit Teaching &amp; Testing Academy."/>
+  <meta property="og:url" content="https://www.orbitteachingacademy.com/examinations.html"/>
+  <meta property="og:type" content="website"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1B2C5E; --navy-deep: #111E42; --teal: #3A9B9B;
+      --teal-light: #5BBFBF; --teal-pale: #EAF7F7; --gold: #C8922A;
+      --gold-light: #E8B94F; --white: #FFFFFF; --off-white: #F7FBFB;
+      --gray: #6B7A99; --gray-light: #E8EDF5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--white); color: var(--navy-deep); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.6rem 5vw;
+      background: rgba(27,44,94,0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(58,155,155,0.25);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 72px; width: auto; display: block; max-width: 260px; object-fit: contain; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: rgba(255,255,255,0.8); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--teal-light); }
+    .nav-cta { background: var(--gold); color: var(--white); padding: 0.65rem 1.5rem; border-radius: 3px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-light); color: var(--navy); }
+
+    /* HERO */
+    .page-hero {
+      min-height: 60vh; background: var(--navy-deep);
+      display: flex; align-items: center; padding: 10rem 5vw 5rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(17,30,66,0.97) 50%, rgba(58,155,155,0.12) 100%);
+    }
+    .orb { position: absolute; border-radius: 50%; border: 1px solid rgba(58,155,155,0.12); pointer-events: none; }
+    .orb-1 { width: 600px; height: 600px; top: -200px; right: -100px; }
+    .orb-2 { width: 900px; height: 900px; top: -400px; right: -350px; border-color: rgba(58,155,155,0.06); }
+    .orb-3 { width: 300px; height: 300px; bottom: -80px; left: 8%; border-color: rgba(200,146,42,0.1); }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--teal-light); text-decoration: none; }
+    .cambridge-badge {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: rgba(200,146,42,0.15); border: 1px solid rgba(200,146,42,0.3);
+      color: var(--gold-light); padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 700;
+      color: var(--white); line-height: 1.0; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .page-hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.8; max-width: 640px; margin-bottom: 2rem; }
+    .page-nav-pills { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.75); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.82rem; font-weight: 500; text-decoration: none; transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .pill:hover { background: rgba(58,155,155,0.2); border-color: var(--teal); color: var(--teal-light); }
+
+    /* HERITAGE BAND */
+    .heritage-band {
+      background: var(--gold);
+      padding: 1.8rem 5vw;
+      display: flex; align-items: center; justify-content: center;
+      gap: 4rem; flex-wrap: wrap;
+    }
+    .heritage-item { display: flex; align-items: center; gap: 1rem; }
+    .heritage-icon { font-size: 1.8rem; }
+    .heritage-text strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--navy-deep); line-height: 1; }
+    .heritage-text span { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,30,66,0.65); }
+    .heritage-divider { width: 1px; height: 40px; background: rgba(17,30,66,0.2); }
+
+    /* SECTIONS */
+    .section { padding: 5.5rem 5vw; }
+    .section.alt { background: var(--off-white); }
+    .section.dark { background: var(--navy-deep); }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); display: block; margin-bottom: 0.75rem; }
+    .section-label.light { color: var(--teal-light); }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.2rem; }
+    .section-title em { font-style: italic; color: var(--teal); }
+    .section-title.light { color: var(--white); }
+    .section-title.light em { color: var(--gold-light); }
+    .section-body { font-size: 1rem; line-height: 1.8; color: var(--gray); margin-bottom: 1rem; }
+    .section-body.light { color: rgba(255,255,255,0.6); }
+    .section-header { text-align: center; max-width: 680px; margin: 0 auto 4rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .four-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+
+    /* CAMBRIDGE EXAM CARDS */
+    .exam-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .exam-card {
+      background: var(--white); border: 1px solid var(--gray-light);
+      border-radius: 8px; padding: 2rem;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .exam-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(27,44,94,0.1); }
+    .exam-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+    .exam-card.a2::before { background: linear-gradient(90deg, #4CAF50, #81C784); }
+    .exam-card.b1::before { background: linear-gradient(90deg, #2196F3, #64B5F6); }
+    .exam-card.b2::before { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+    .exam-card.c1::before { background: linear-gradient(90deg, var(--navy), #3D5AA0); }
+    .exam-card.c2::before { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+    .exam-card.bec::before { background: linear-gradient(90deg, #9C27B0, #CE93D8); }
+    .exam-level {
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.25rem 0.75rem; border-radius: 50px;
+      margin-bottom: 0.75rem;
+    }
+    .level-a2 { background: rgba(76,175,80,0.1); color: #2E7D32; }
+    .level-b1 { background: rgba(33,150,243,0.1); color: #1565C0; }
+    .level-b2 { background: rgba(58,155,155,0.1); color: var(--teal); }
+    .level-c1 { background: rgba(27,44,94,0.1); color: var(--navy); }
+    .level-c2 { background: rgba(200,146,42,0.1); color: var(--gold); }
+    .level-bec { background: rgba(156,39,176,0.1); color: #7B1FA2; }
+    .exam-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+    .exam-full { font-size: 0.8rem; color: var(--gray); margin-bottom: 1rem; font-style: italic; }
+    .exam-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.2rem; }
+    .exam-suits { font-size: 0.78rem; font-weight: 600; color: var(--navy); }
+    .exam-suits span { color: var(--teal); }
+
+    /* BESPOKE SECTION */
+    .bespoke-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .bespoke-card {
+      background: var(--white); border: 1px solid var(--gray-light);
+      border-radius: 8px; padding: 2rem;
+      display: flex; gap: 1.2rem; align-items: flex-start;
+      transition: box-shadow 0.3s;
+    }
+    .bespoke-card:hover { box-shadow: 0 8px 30px rgba(27,44,94,0.08); }
+    .bespoke-icon {
+      width: 3rem; height: 3rem; border-radius: 8px;
+      background: var(--teal-pale); display: flex;
+      align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .bespoke-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+    .bespoke-body { font-size: 0.88rem; color: var(--gray); line-height: 1.7; }
+
+    /* ADMISSIONS TIMELINE */
+    .admissions-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-bottom: 4rem; }
+    .astat { padding: 2.5rem 2rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
+    .astat:last-child { border-right: none; }
+    .astat-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; color: var(--gold-light); line-height: 1; }
+    .astat-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.5rem; }
+
+    .expertise-list { display: flex; flex-direction: column; gap: 0; max-width: 860px; margin: 0 auto; }
+    .expertise-item {
+      display: grid; grid-template-columns: 60px 1fr;
+      gap: 2rem; padding: 2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      align-items: start;
+    }
+    .expertise-item:last-child { border-bottom: none; }
+    .expertise-icon { font-size: 1.8rem; padding-top: 0.2rem; }
+    .expertise-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .expertise-body { font-size: 0.92rem; color: rgba(255,255,255,0.55); line-height: 1.8; }
+
+    /* WHY ORBIT */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .why-card { background: var(--white); border: 1px solid var(--gray-light); border-radius: 8px; padding: 2.5rem; border-top: 4px solid var(--teal); transition: transform 0.3s, box-shadow 0.3s; }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(27,44,94,0.1); }
+    .why-card.gold { border-top-color: var(--gold); }
+    .why-card.navy { border-top-color: var(--navy); }
+    .why-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .why-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; }
+    .why-body { font-size: 0.92rem; color: var(--gray); line-height: 1.8; }
+
+    /* CTA */
+    .cta-band { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); padding: 5rem 5vw; text-align: center; color: white; position: relative; overflow: hidden; }
+    .cta-band::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(58,155,155,0.1); pointer-events: none; }
+    .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; margin-bottom: 0.75rem; position: relative; z-index: 1; }
+    .cta-band h2 em { font-style: italic; color: var(--gold-light); }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.55); margin-bottom: 2rem; max-width: 540px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-gold { background: var(--gold); color: white; padding: 1rem 2.2rem; border-radius: 3px; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); padding: 1rem 2.2rem; border-radius: 3px; font-weight: 500; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: border-color 0.2s, background 0.2s; }
+    .btn-outline:hover { border-color: var(--teal-light); background: rgba(58,155,155,0.1); }
+
+    /* FOOTER */
+    footer { background: #0C1528; color: white; padding: 3rem 5vw; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .footer-bottom a { color: var(--teal-light); text-decoration: none; }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      nav { padding: 0.75rem 5vw; }
+      .nav-links { display: none; }
+      .nav-logo img { height: 52px; }
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.8rem; }
+      .page-hero { padding: 8rem 5vw 3rem; min-height: auto; }
+      .page-hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+      .heritage-band { gap: 1.5rem; padding: 1.5rem 5vw; }
+      .heritage-divider { display: none; }
+      .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+      .three-col, .why-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .exam-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .four-col, .admissions-stats { grid-template-columns: 1fr 1fr; }
+      .bespoke-grid { grid-template-columns: 1fr; }
+      .expertise-item { grid-template-columns: 50px 1fr; gap: 1rem; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .cta-actions a { width: 100%; max-width: 320px; text-align: center; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .exam-grid { grid-template-columns: 1fr; }
+      .admissions-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Orbit Teaching &amp; Testing Academy"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+    <div style="display:none; align-items:center; gap:0.5rem;">
+      <div style="width:40px; height:40px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">🌍</div>
+      <div>
+        <strong style="display:block; font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:white;">ORBIT</strong>
+        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching &amp; Testing Academy</span>
+      </div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="celta.html">The Training</a></li>
+    <li><a href="examinations.html" style="color:var(--teal-light);">Examinations</a></li>
+    <li><a href="index.html#destinations">Destinations</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="register.html" class="nav-cta">Register Interest</a>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Examination Services</div>
+    <div class="cambridge-badge">🎓 Authorised Cambridge Assessment Centre</div>
+    <h1>Examination<br/><em>Testing Services</em></h1>
+    <p class="page-hero-sub">Orbit Teaching &amp; Testing Academy is proud to offer a comprehensive suite of examination and assessment services — from internationally recognised Cambridge University qualifications to bespoke programme assessments and professional admissions testing with over a decade of experience.</p>
+    <div class="page-nav-pills">
+      <a href="#cambridge" class="pill">🎓 Cambridge Exams</a>
+      <a href="#bespoke" class="pill">📋 Bespoke Assessments</a>
+      <a href="#admissions" class="pill">🏛️ Admissions Testing</a>
+      <a href="#why-orbit" class="pill">✓ Why Orbit</a>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE BAND -->
+<div class="heritage-band">
+  <div class="heritage-item">
+    <div class="heritage-icon">📅</div>
+    <div class="heritage-text">
+      <strong>10+ Years</strong>
+      <span>Admissions Testing Experience</span>
+    </div>
+  </div>
+  <div class="heritage-divider"></div>
+  <div class="heritage-item">
+    <div class="heritage-icon">🎓</div>
+    <div class="heritage-text">
+      <strong>Cambridge</strong>
+      <span>Authorised Examination Centre</span>
+    </div>
+  </div>
+  <div class="heritage-divider"></div>
+  <div class="heritage-item">
+    <div class="heritage-icon">🌍</div>
+    <div class="heritage-text">
+      <strong>Global</strong>
+      <span>Recognised Qualifications</span>
+    </div>
+  </div>
+  <div class="heritage-divider"></div>
+  <div class="heritage-item">
+    <div class="heritage-icon">📝</div>
+    <div class="heritage-text">
+      <strong>Bespoke</strong>
+      <span>Custom Assessment Solutions</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section alt">
+  <div class="two-col" style="max-width:1200px; margin:0 auto;">
+    <div>
+      <span class="section-label">Our Examination Services</span>
+      <h2 class="section-title">Trusted assessment —<br/><em>from entry level to elite.</em></h2>
+      <p class="section-body">At Orbit Teaching &amp; Testing Academy, our examination services go far beyond teacher certification. We are an authorised centre for Cambridge Assessment English examinations — the world's most recognised suite of English language qualifications — and we bring more than a decade of professional admissions testing expertise to every assessment we deliver.</p>
+      <p class="section-body">Whether you're an individual seeking internationally recognised proof of your English proficiency, an institution requiring bespoke assessment solutions, or a university in need of rigorous professional admissions testing — Orbit has the experience, accreditation, and infrastructure to deliver.</p>
+      <p class="section-body">Every examination we administer is conducted to the highest standards of integrity, security, and fairness — exactly what Cambridge Assessment English and our institutional partners expect and require.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:1.2rem;">
+      <div style="background:var(--navy-deep); border-radius:8px; padding:2.5rem; color:white; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-30px; right:-30px; width:150px; height:150px; border-radius:50%; border:1px solid rgba(58,155,155,0.15);"></div>
+        <div style="font-size:2rem; margin-bottom:1rem;">🎓</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:700; color:var(--white); margin-bottom:0.5rem;">Cambridge Assessment English</div>
+        <div style="font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.7;">Part of the University of Cambridge — the world's leading provider of English language qualifications, recognised by employers, universities, and governments in over 130 countries.</div>
+      </div>
+      <div style="background:linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius:8px; padding:2.5rem; color:var(--navy-deep);">
+        <div style="font-size:2rem; margin-bottom:1rem;">🏛️</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:700; margin-bottom:0.5rem;">Over a Decade of Admissions Testing</div>
+        <div style="font-size:0.82rem; color:rgba(17,30,66,0.7); line-height:1.7;">Orbit's leadership brings more than 10 years of experience designing, administering, and evaluating professional admissions testing for universities — with rigour, discretion, and expertise you can rely on.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMBRIDGE EXAMS -->
+<section class="section" id="cambridge">
+  <div class="section-header">
+    <span class="section-label">Cambridge University Examinations</span>
+    <h2 class="section-title">Internationally recognised<br/><em>English qualifications</em></h2>
+    <p class="section-body">We offer the full suite of Cambridge Assessment English examinations — from foundational to proficiency level. Each qualification is globally recognised and mapped to the Common European Framework of Reference (CEFR).</p>
+  </div>
+
+  <div class="exam-grid" style="max-width:1100px; margin:0 auto;">
+
+    <div class="exam-card a2">
+      <div class="exam-level level-a2">A2 · CEFR</div>
+      <div class="exam-name">KET</div>
+      <div class="exam-full">Key English Test (A2 Key)</div>
+      <div class="exam-desc">The Cambridge A2 Key qualification proves that a candidate can communicate in simple situations and demonstrates basic English ability in reading, writing, listening, and speaking.</div>
+      <div class="exam-suits">Best for: <span>Beginner learners building foundational English skills</span></div>
+    </div>
+
+    <div class="exam-card b1">
+      <div class="exam-level level-b1">B1 · CEFR</div>
+      <div class="exam-name">PET</div>
+      <div class="exam-full">Preliminary English Test (B1 Preliminary)</div>
+      <div class="exam-desc">The B1 Preliminary qualification demonstrates intermediate English skills — suitable for those who can handle straightforward written and spoken communications in familiar situations.</div>
+      <div class="exam-suits">Best for: <span>Intermediate learners preparing for work or study abroad</span></div>
+    </div>
+
+    <div class="exam-card b2">
+      <div class="exam-level level-b2">B2 · CEFR</div>
+      <div class="exam-name">FCE</div>
+      <div class="exam-full">First Certificate in English (B2 First)</div>
+      <div class="exam-desc">One of Cambridge's most widely recognised qualifications. B2 First proves upper-intermediate English ability and is accepted by thousands of universities and employers worldwide as proof of ability to study or work in English.</div>
+      <div class="exam-suits">Best for: <span>University entry, professional employment, and study programmes</span></div>
+    </div>
+
+    <div class="exam-card c1">
+      <div class="exam-level level-c1">C1 · CEFR</div>
+      <div class="exam-name">CAE</div>
+      <div class="exam-full">Certificate in Advanced English (C1 Advanced)</div>
+      <div class="exam-desc">The C1 Advanced qualification demonstrates high-level English ability for demanding academic and professional contexts. Widely accepted by top universities and multinational employers as proof of advanced English proficiency.</div>
+      <div class="exam-suits">Best for: <span>Elite university admission, senior professional roles, postgraduate study</span></div>
+    </div>
+
+    <div class="exam-card c2">
+      <div class="exam-level level-c2">C2 · CEFR</div>
+      <div class="exam-name">CPE</div>
+      <div class="exam-full">Certificate of Proficiency in English (C2 Proficiency)</div>
+      <div class="exam-desc">The highest level Cambridge qualification — C2 Proficiency demonstrates mastery of English at the very highest level, equivalent to that of a highly educated native speaker. The benchmark qualification for complete English fluency.</div>
+      <div class="exam-suits">Best for: <span>The highest-level academic and professional contexts worldwide</span></div>
+    </div>
+
+    <div class="exam-card bec">
+      <div class="exam-level level-bec">Business · CEFR</div>
+      <div class="exam-name">BEC</div>
+      <div class="exam-full">Business English Certificate (Preliminary, Vantage, Higher)</div>
+      <div class="exam-desc">The Cambridge Business English Certificates are internationally recognised qualifications that prove ability to communicate in English in business and professional settings — available at B1, B2, and C1 levels.</div>
+      <div class="exam-suits">Best for: <span>Business professionals, corporate teams, and commercial environments</span></div>
+    </div>
+
+  </div>
+
+  <div style="background:var(--teal-pale); border:1px solid rgba(58,155,155,0.2); border-radius:8px; padding:2rem 2.5rem; max-width:1100px; margin:2rem auto 0; display:flex; align-items:center; gap:1.5rem;">
+    <div style="font-size:2rem; flex-shrink:0;">ℹ️</div>
+    <div style="font-size:0.92rem; color:var(--navy); line-height:1.7;"><strong>Not sure which Cambridge exam is right for you?</strong> Our team can help you identify the most appropriate qualification based on your current level, goals, and the requirements of your target institution or employer. <a href="register.html" style="color:var(--teal); font-weight:600;">Get in touch →</a></div>
+  </div>
+</section>
+
+<!-- BESPOKE -->
+<section class="section alt" id="bespoke">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="two-col" style="margin-bottom:4rem;">
+      <div>
+        <span class="section-label">Bespoke Assessment Solutions</span>
+        <h2 class="section-title">Custom examinations<br/>built for your <em>programme.</em></h2>
+        <p class="section-body">Not every assessment need fits a standard qualification framework. Orbit Teaching &amp; Testing Academy works with institutions, organisations, and programme providers to design, develop, and administer bespoke examination and assessment solutions tailored to specific learning outcomes, professional competency frameworks, or programme requirements.</p>
+        <p class="section-body">Our bespoke assessment services are built on the same principles of rigour, validity, and fairness that underpin our Cambridge examination delivery — ensuring results that are meaningful, defensible, and trusted by all stakeholders.</p>
+        <p class="section-body">We primarily deliver bespoke examination services across <strong style="color:var(--navy);">Philadelphia and New York</strong>, and can accommodate testing in any city across the United States. Worldwide delivery is available — please enquire directly to discuss your location and requirements.</p>
+      </div>
+      <div style="background:var(--navy); border-radius:8px; padding:3rem; color:white;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; margin-bottom:1.5rem; color:var(--gold-light);">What bespoke assessment means for you</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem;">
+          <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8);"><span style="color:var(--gold-light); flex-shrink:0;">✓</span> Assessments aligned to your specific programme outcomes</li>
+          <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8);"><span style="color:var(--gold-light); flex-shrink:0;">✓</span> Flexible formats — written, oral, digital, or combined</li>
+          <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8);"><span style="color:var(--gold-light); flex-shrink:0;">✓</span> Designed around your candidates and context</li>
+          <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8);"><span style="color:var(--gold-light); flex-shrink:0;">✓</span> Full administration, invigilation, and marking support</li>
+          <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8);"><span style="color:var(--gold-light); flex-shrink:0;">✓</span> Secure, confidential, and professionally managed</li>
+          <li style="display:flex; gap:0.75rem; font-size:0.9rem; color:rgba(255,255,255,0.8);"><span style="color:var(--gold-light); flex-shrink:0;">✓</span> Results reporting tailored to your stakeholder needs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bespoke-grid">
+      <div class="bespoke-card">
+        <div class="bespoke-icon">🏫</div>
+        <div>
+          <div class="bespoke-title">Language Programme Assessment</div>
+          <div class="bespoke-body">End-of-programme assessments for English language courses, intensive programmes, and institutional language requirements — designed to measure what your programme actually teaches.</div>
+        </div>
+      </div>
+      <div class="bespoke-card">
+        <div class="bespoke-icon">💼</div>
+        <div>
+          <div class="bespoke-title">Corporate Competency Testing</div>
+          <div class="bespoke-body">Language and communication competency assessments for corporate hiring, internal promotion, or compliance requirements — built around your organisation's specific professional standards.</div>
+        </div>
+      </div>
+      <div class="bespoke-card">
+        <div class="bespoke-icon">📊</div>
+        <div>
+          <div class="bespoke-title">Placement & Diagnostic Testing</div>
+          <div class="bespoke-body">Accurately place learners into appropriate programme levels before they begin — or diagnose specific areas of language development to inform targeted teaching and intervention.</div>
+        </div>
+      </div>
+      <div class="bespoke-card">
+        <div class="bespoke-icon">🎯</div>
+        <div>
+          <div class="bespoke-title">Programme Exit Certification</div>
+          <div class="bespoke-body">Provide meaningful, credentialled recognition of achievement for participants completing your bespoke training or development programme — with Orbit's assessment expertise behind every result.</div>
+        </div>
+      </div>
+      <div class="bespoke-card" style="border-color:var(--teal); background:var(--teal-pale);">
+        <div class="bespoke-icon" style="background:rgba(58,155,155,0.2);">📍</div>
+        <div>
+          <div class="bespoke-title">Where We Deliver</div>
+          <div class="bespoke-body">Our primary bespoke examination locations are <strong>Philadelphia, PA</strong> and <strong>New York, NY</strong>. We can accommodate testing in any city across the United States, and worldwide delivery is available on enquiry. <a href="register.html" style="color:var(--teal); font-weight:600;">Contact us to discuss your location →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCATION BAND -->
+    <div style="background:var(--navy-deep); border-radius:8px; padding:2.5rem 3rem; margin-top:2rem; display:grid; grid-template-columns:1fr auto; align-items:center; gap:2rem;">
+      <div>
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--teal-light); margin-bottom:0.75rem;">Examination Delivery Locations</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; color:var(--white); margin-bottom:0.5rem;">Philadelphia & New York — and beyond.</div>
+        <div style="font-size:0.9rem; color:rgba(255,255,255,0.55); line-height:1.7;">We are primarily based across <strong style="color:white;">Philadelphia, PA</strong> and <strong style="color:white;">New York, NY</strong> for in-person bespoke examination delivery. Testing can be arranged in <strong style="color:white;">any US city</strong> upon request, and <strong style="color:white;">international delivery</strong> is available — please enquire to discuss your specific location and logistics.</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0.75rem; flex-shrink:0;">
+        <div style="display:flex; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.06); border-radius:6px; padding:0.75rem 1.2rem;">
+          <span style="font-size:1.2rem;">🏙️</span>
+          <div>
+            <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-light);">Primary</div>
+            <div style="font-size:0.92rem; color:white; font-weight:600;">Philadelphia & New York</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.06); border-radius:6px; padding:0.75rem 1.2rem;">
+          <span style="font-size:1.2rem;">🇺🇸</span>
+          <div>
+            <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-light);">On Request</div>
+            <div style="font-size:0.92rem; color:white; font-weight:600;">Any US City</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.06); border-radius:6px; padding:0.75rem 1.2rem;">
+          <span style="font-size:1.2rem;">🌍</span>
+          <div>
+            <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--teal-light);">Enquire</div>
+            <div style="font-size:0.92rem; color:white; font-weight:600;">Worldwide Options</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ADMISSIONS TESTING -->
+<section class="section dark" id="admissions">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header">
+      <span class="section-label light">Professional Admissions Testing</span>
+      <h2 class="section-title light">Over a decade of<br/><em>university admissions expertise</em></h2>
+      <p class="section-body light">Orbit Teaching &amp; Testing Academy's leadership brings more than ten years of hands-on experience designing and administering professional admissions testing for universities and higher education institutions. We understand the stakes, the standards, and the sensitivity that admissions testing demands.</p>
+    </div>
+
+    <div class="admissions-stats">
+      <div class="astat">
+        <div class="astat-num">10+</div>
+        <div class="astat-label">Years of Experience</div>
+      </div>
+      <div class="astat">
+        <div class="astat-num">100%</div>
+        <div class="astat-label">Confidentiality Record</div>
+      </div>
+      <div class="astat">
+        <div class="astat-num">∞</div>
+        <div class="astat-label">Commitment to Integrity</div>
+      </div>
+      <div class="astat">
+        <div class="astat-num">HE</div>
+        <div class="astat-label">Sector Specialists</div>
+      </div>
+    </div>
+
+    <div class="expertise-list">
+      <div class="expertise-item">
+        <div class="expertise-icon">🏛️</div>
+        <div>
+          <div class="expertise-title">University Professional Programme Admissions</div>
+          <div class="expertise-body">We have extensive experience designing and delivering admissions assessments for competitive professional university programmes — including aptitude testing, language proficiency screening, and structured interview frameworks. Our processes are built to withstand scrutiny and support defensible admissions decisions.</div>
+        </div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-icon">🔒</div>
+        <div>
+          <div class="expertise-title">Security, Confidentiality & Integrity</div>
+          <div class="expertise-body">Admissions testing demands absolute discretion. Orbit operates with the highest standards of test security — from question bank management and invigilation protocols to results handling and candidate confidentiality. Our decade of experience has been built on a foundation of institutional trust.</div>
+        </div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-icon">📐</div>
+        <div>
+          <div class="expertise-title">Test Design & Validation</div>
+          <div class="expertise-body">Our team brings expertise in assessment design principles — ensuring that admissions instruments are valid, reliable, and fair. We work with institutional stakeholders to align testing frameworks with programme requirements, accreditation standards, and regulatory expectations.</div>
+        </div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-icon">📈</div>
+        <div>
+          <div class="expertise-title">Results Analysis & Reporting</div>
+          <div class="expertise-body">Beyond administration, we provide meaningful analysis of assessment outcomes — helping institutions understand cohort performance, benchmark against historical data, and make evidence-based admissions decisions with confidence.</div>
+        </div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-icon">🏥</div>
+        <div>
+          <div class="expertise-title">Medical & Science Admissions Examinations</div>
+          <div class="expertise-body">Our team has direct experience invigilating and administering some of the most demanding professional admissions examinations in the world, including:<br/><br/>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; margin-bottom:1rem;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">BMAT</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">BioMedical Admissions Test</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">IMAT</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">International Medical Admissions Test</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">TMUA</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">Test of Mathematics for University Admission</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">ESAT</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">Engineering & Science Admissions Test</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">TARA</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">Test of Abstract Reasoning Ability</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">UCAT</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">University Clinical Aptitude Test</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:6px; padding:0.75rem 1rem; grid-column:1/-1;">
+              <div style="font-weight:700; color:white; font-size:0.92rem;">LNAT</div>
+              <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:0.2rem;">National Admissions Test for Law</div>
+            </div>
+          </div>
+          We understand the exceptional standards of security, candidate management, and procedural rigour these examinations demand — and we deliver them without exception.</div>
+        </div>
+      </div>
+      <div class="expertise-item">
+        <div class="expertise-icon">🤝</div>
+        <div>
+          <div class="expertise-title">Institutional Partnership</div>
+          <div class="expertise-body">We work as genuine partners with the institutions we serve — not just service providers. That means understanding your programme goals, your candidate profile, and your admissions philosophy, and building assessment solutions that genuinely serve them.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXAM EXPERIENCE BADGES -->
+    <div style="margin-top:3rem; padding-top:3rem; border-top:1px solid rgba(255,255,255,0.08); text-align:center;">
+      <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:1.5rem;">Examinations We Have Delivered</div>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">BMAT</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">IMAT</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">TMUA</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">ESAT</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">TARA</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">UCAT</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">LNAT</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">Cambridge FCE</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">Cambridge CAE</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">Cambridge CPE</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">Cambridge BEC</div>
+        <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:white;">Professional Admissions Testing</div>
+        <div style="background:rgba(200,146,42,0.15); border:1px solid rgba(200,146,42,0.3); border-radius:6px; padding:0.75rem 1.5rem; font-size:0.92rem; font-weight:700; color:var(--gold-light);">+ Similar High-Stakes Assessments</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY ORBIT -->
+<section class="section" id="why-orbit">
+  <div class="section-header">
+    <span class="section-label">Why Orbit</span>
+    <h2 class="section-title">The Orbit <em>difference</em></h2>
+    <p class="section-body">Examination services are only as good as the organisation delivering them. Here's what sets Orbit apart.</p>
+  </div>
+  <div class="why-grid" style="max-width:1100px; margin:0 auto;">
+    <div class="why-card">
+      <div class="why-icon">🎓</div>
+      <div class="why-title">Cambridge Accredited</div>
+      <div class="why-body">As an authorised Cambridge Assessment English centre, our examination delivery meets the exacting standards set by one of the world's most respected educational institutions. Every exam is administered exactly as Cambridge requires.</div>
+    </div>
+    <div class="why-card gold">
+      <div class="why-icon">📅</div>
+      <div class="why-title">Decade of Proven Experience</div>
+      <div class="why-body">Our leadership team brings over ten years of professional admissions and examination experience — not theoretical knowledge, but real, hands-on expertise built across hundreds of assessments and thousands of candidates.</div>
+    </div>
+    <div class="why-card navy">
+      <div class="why-icon">🔧</div>
+      <div class="why-title">Flexible & Tailored</div>
+      <div class="why-body">From a single Cambridge exam sitting to a full bespoke admissions testing programme — we scale to your needs. We work with individuals, corporates, language schools, and universities with equal care and professionalism.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔒</div>
+      <div class="why-title">Absolute Integrity</div>
+      <div class="why-body">Every assessment we deliver is conducted with the highest standards of security, fairness, and confidentiality. Our reputation is built on trust — and we take that seriously in everything we do.</div>
+    </div>
+    <div class="why-card gold">
+      <div class="why-icon">🌍</div>
+      <div class="why-title">Global Recognition</div>
+      <div class="why-body">Cambridge qualifications delivered through Orbit carry the same international weight as those from any Cambridge centre worldwide — recognised by universities, employers, and immigration authorities in 130+ countries.</div>
+    </div>
+    <div class="why-card navy">
+      <div class="why-icon">💬</div>
+      <div class="why-title">Human Support Throughout</div>
+      <div class="why-body">Whether you're an individual preparing for your first Cambridge exam or an institution managing a large-scale admissions process — you'll always have a real person to speak with at Orbit. We don't hide behind automated systems.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Ready to discuss your <em>examination needs?</em></h2>
+  <p>Whether you need a single Cambridge exam sitting, a bespoke assessment solution, or a full admissions testing programme — we'd love to hear from you.</p>
+  <div class="cta-actions">
+    <a href="register.html" class="btn-gold">Get In Touch →</a>
+    <a href="celta.html" class="btn-outline">Explore Our Training</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Orbit Teaching &amp; Testing Academy · <a href="index.html">Back to Home</a> · <a href="about.html">About Us</a></span>
+    <span>Get Certified. Teach. Travel. Transform Lives.</span>
+  </div>
+</footer>
+
+</body>
+</html>
