@@ -1,22 +1,4 @@
 [[redirects]]
-  from = "http://orbitteachingacademy.com/*"
-  to = "https://www.orbitteachingacademy.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://orbitteachingacademy.com/*"
-  to = "https://www.orbitteachingacademy.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.orbitteachingacademy.com/*"
-  to = "https://www.orbitteachingacademy.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/"
   to = "/index.html"
   status = 200
