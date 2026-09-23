@@ -1,1 +1,7 @@
+# Force HTTPS and www
+http://orbitteachingacademy.com/* https://www.orbitteachingacademy.com/:splat 301!
+https://orbitteachingacademy.com/* https://www.orbitteachingacademy.com/:splat 301!
+http://www.orbitteachingacademy.com/* https://www.orbitteachingacademy.com/:splat 301!
+
+# Ensure index.html serves as homepage
 / /index.html 200
