@@ -317,7 +317,10 @@
     .form-msg.ok{background:#E6F6EE;color:#1E6B45}.form-msg.err{background:#FDECEC;color:#8A2A2A}
     @media(max-width:900px){.season-grid{grid-template-columns:1fr 1fr}.info-strip{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.form-wrap{padding:1.5rem}}
     @media(max-width:480px){.season-grid{grid-template-columns:1fr}}
-</style>
+
+    /* ensure hamburger shows on mobile (must come after base .nav-hamburger rule) */
+    @media (max-width: 900px) { .nav-hamburger { display: flex; } }
+  </style>
 </head>
 <body>
 

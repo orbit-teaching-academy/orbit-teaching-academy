@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Orbit Teaching Academy — We Don't Just Certify, We Launch Careers</title>
-  <meta name="description" content="Learn about Orbit Teaching Academy — our mission, values, and commitment to helping educators get Cambridge CELTA certified and teach abroad."/>
+  <title>About Orbit Teaching &amp; Testing Academy — We Don't Just Certify, We Launch Careers</title>
+  <meta name="description" content="Learn about Orbit Teaching &amp; Testing Academy — our mission, values, and commitment to helping educators get Cambridge CELTA certified and teach abroad."/>
   <link rel="canonical" href="https://www.orbitteachingacademy.com/about.html"/>
-  <meta property="og:title" content="About Orbit Teaching Academy"/>
+  <meta property="og:title" content="About Orbit Teaching &amp; Testing Academy"/>
   <meta property="og:url" content="https://www.orbitteachingacademy.com/about.html"/>
   <meta property="og:type" content="website"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -141,7 +141,10 @@
     @media (max-width: 900px) {
       nav { padding: 0.75rem 5vw; }
       .nav-links { display: none; }
-      .nav-cta { padding: 0.5rem 1rem; font-size: 0.8rem; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
       .page-hero { padding: 8rem 5vw 3rem; min-height: auto; }
       .page-hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
       .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -155,6 +158,57 @@
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
       .nav-logo img { height: 52px; }
     }
+  
+    /* ── HAMBURGER & MOBILE MENU ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column; justify-content: space-between;
+      width: 28px; height: 20px;
+      background: none; border: none; cursor: pointer; padding: 0;
+      flex-shrink: 0;
+    }
+    .nav-hamburger span {
+      display: block; width: 100%; height: 2px;
+      background: white; border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: var(--navy-deep);
+      flex-direction: column; justify-content: center; align-items: center;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-close {
+      position: absolute; top: 1.5rem; right: 5vw;
+      background: none; border: none; color: white;
+      font-size: 1.8rem; cursor: pointer; line-height: 1;
+    }
+    .mobile-nav {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0; width: 100%; padding: 2rem 5vw;
+    }
+    .mobile-nav a {
+      display: block; width: 100%; text-align: center;
+      padding: 1.2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: rgba(255,255,255,0.85); text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--teal-light); }
+    .mobile-nav .mobile-nav-cta {
+      margin-top: 2rem; border: none;
+      background: var(--gold); color: white !important;
+      border-radius: 4px; padding: 1rem 2rem;
+      font-size: 1.1rem; font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.05em;
+    }
+
+    
+    /* ensure hamburger shows on mobile (must come after base .nav-hamburger rule) */
+    @media (max-width: 900px) { .nav-hamburger { display: flex; } }
   </style>
 </head>
 <body>
@@ -162,24 +216,40 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="logo.png" alt="Orbit Teaching Academy" 
+    <img src="logo.png" alt="Orbit Teaching &amp; Testing Academy" 
       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
     <div style="display:none; align-items:center; gap:0.5rem;">
       <div style="width:40px; height:40px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">🌍</div>
       <div>
         <strong style="display:block; font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:white;">ORBIT</strong>
-        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching Academy</span>
+        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching &amp; Testing Academy</span>
       </div>
     </div>
   </a>
   <ul class="nav-links">
     <li><a href="celta.html">The Training</a></li>
+    <li><a href="examinations.html">Examinations</a></li>
     <li><a href="index.html#destinations">Destinations</a></li>
     <li><a href="index.html#testimonials">Stories</a></li>
     <li><a href="about.html" style="color:var(--teal-light);">About</a></li>
   </ul>
   <a href="register.html" class="nav-cta">Register Interest</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+  <nav class="mobile-nav">
+    <a href="celta.html" onclick="toggleMenu()">The Training</a>
+    <a href="examinations.html" onclick="toggleMenu()">Testing</a>
+    <a href="index.html#destinations" onclick="toggleMenu()">Destinations</a>
+    <a href="index.html#testimonials" onclick="toggleMenu()">Stories</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="register.html" class="mobile-nav-cta" onclick="toggleMenu()">Register Your Interest →</a>
+  </nav>
+</div>
 
 <!-- HERO -->
 <section class="page-hero">
@@ -189,7 +259,7 @@
   <div class="hero-content">
     <div class="breadcrumb"><a href="index.html">Home</a> › About</div>
     <h1>We don't just certify —<br/>we <em>launch careers.</em></h1>
-    <p class="page-hero-sub">Orbit Teaching Academy exists for one reason — to take educators from curious to certified to confidently teaching somewhere in the world they've always wanted to go.</p>
+    <p class="page-hero-sub">Orbit Teaching &amp; Testing Academy exists for one reason — to take educators from curious to certified to confidently teaching somewhere in the world they've always wanted to go.</p>
   </div>
 </section>
 
@@ -200,7 +270,7 @@
       <span class="section-label">Our Mission</span>
       <h2 class="section-title">Education without <em>borders.</em></h2>
       <p class="section-body">We believe that great teaching can happen anywhere — and that the world needs more people willing to take their skills across borders and into classrooms that need them most.</p>
-      <p class="section-body">Orbit Teaching Academy was built to make that journey as clear, supported, and achievable as possible. From the moment you register your interest to the day you walk into your first international classroom, we're with you every step of the way.</p>
+      <p class="section-body">Orbit Teaching &amp; Testing Academy was built to make that journey as clear, supported, and achievable as possible. From the moment you register your interest to the day you walk into your first international classroom, we're with you every step of the way.</p>
       <p class="section-body">We partner with Cambridge Assessment English — part of the University of Cambridge — to deliver the CELTA qualification, the most respected entry-level teaching certificate in the world. Because your students deserve a teacher who is genuinely prepared.</p>
       <ul class="check-list">
         <li>Cambridge CELTA — internationally recognised in 100+ countries</li>
@@ -282,7 +352,7 @@
         <div class="timeline-year">The Idea</div>
         <div>
           <div class="timeline-title">A gap in the market — and in the support</div>
-          <div class="timeline-body">Orbit Teaching Academy was founded after seeing too many aspiring teachers fall through the cracks — great candidates who wanted to teach abroad but couldn't find a programme that gave them both the credential and the practical support to actually get there. We decided to build one.</div>
+          <div class="timeline-body">Orbit Teaching &amp; Testing Academy was founded after seeing too many aspiring teachers fall through the cracks — great candidates who wanted to teach abroad but couldn't find a programme that gave them both the credential and the practical support to actually get there. We decided to build one.</div>
         </div>
       </div>
       <div class="timeline-item">
@@ -378,10 +448,23 @@
 
 <footer>
   <div class="footer-bottom">
-    <span>© 2026 Orbit Teaching Academy · <a href="index.html">Back to Home</a></span>
+    <span>© 2026 Orbit Teaching &amp; Testing Academy · Philadelphia, PA · <a href="index.html">Back to Home</a> · <a href="mailto:passport@orbitteachingacademy.com" style="color:var(--teal-light);">passport@orbitteachingacademy.com</a></span>
     <span>Get Certified. Teach. Travel. Transform Lives.</span>
   </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
 </body>
 </html>

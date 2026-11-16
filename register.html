@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Register Your Interest — Orbit Teaching Academy</title>
-  <meta name="description" content="Register your interest in the Cambridge CELTA programme at Orbit Teaching Academy. Be among the first to hear when enrolment opens."/>
+  <title>Register Your Interest — Orbit Teaching &amp; Testing Academy</title>
+  <meta name="description" content="Register your interest in the Cambridge CELTA programme at Orbit Teaching &amp; Testing Academy. Be among the first to hear when enrolment opens."/>
   <link rel="canonical" href="https://www.orbitteachingacademy.com/register.html"/>
-  <meta property="og:title" content="Register Your Interest — Orbit Teaching Academy"/>
+  <meta property="og:title" content="Register Your Interest — Orbit Teaching &amp; Testing Academy"/>
   <meta property="og:url" content="https://www.orbitteachingacademy.com/register.html"/>
   <meta property="og:type" content="website"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -187,6 +187,8 @@
     @media (max-width: 900px) {
       nav { padding: 0.75rem 5vw; }
       .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
       .nav-logo img { height: 52px; }
       .page-wrap { grid-template-columns: 1fr; }
       .left-panel {
@@ -198,6 +200,57 @@
       .gform-wrap iframe { height: 1600px; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
+  
+    /* ── HAMBURGER & MOBILE MENU ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column; justify-content: space-between;
+      width: 28px; height: 20px;
+      background: none; border: none; cursor: pointer; padding: 0;
+      flex-shrink: 0;
+    }
+    .nav-hamburger span {
+      display: block; width: 100%; height: 2px;
+      background: white; border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: var(--navy-deep);
+      flex-direction: column; justify-content: center; align-items: center;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-close {
+      position: absolute; top: 1.5rem; right: 5vw;
+      background: none; border: none; color: white;
+      font-size: 1.8rem; cursor: pointer; line-height: 1;
+    }
+    .mobile-nav {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0; width: 100%; padding: 2rem 5vw;
+    }
+    .mobile-nav a {
+      display: block; width: 100%; text-align: center;
+      padding: 1.2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: rgba(255,255,255,0.85); text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--teal-light); }
+    .mobile-nav .mobile-nav-cta {
+      margin-top: 2rem; border: none;
+      background: var(--gold); color: white !important;
+      border-radius: 4px; padding: 1rem 2rem;
+      font-size: 1.1rem; font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.05em;
+    }
+
+    
+    /* ensure hamburger shows on mobile (must come after base .nav-hamburger rule) */
+    @media (max-width: 900px) { .nav-hamburger { display: flex; } }
   </style>
 </head>
 <body>
@@ -205,24 +258,39 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="logo.png" alt="Orbit Teaching Academy"
+    <img src="logo.png" alt="Orbit Teaching &amp; Testing Academy"
       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
     <div style="display:none; align-items:center; gap:0.5rem;">
       <div style="width:40px; height:40px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">🌍</div>
       <div>
         <strong style="display:block; font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:white;">ORBIT</strong>
-        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching Academy</span>
+        <span style="font-size:0.62rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal);">Teaching &amp; Testing Academy</span>
       </div>
     </div>
   </a>
   <ul class="nav-links">
     <li><a href="celta.html">The Training</a></li>
+    <li><a href="examinations.html">Examinations</a></li>
     <li><a href="index.html#destinations">Destinations</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="index.html#testimonials">Stories</a></li>
   </ul>
   <a href="index.html" class="nav-cta">← Back to Site</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+  <nav class="mobile-nav">
+    <a href="celta.html" onclick="toggleMenu()">The Training</a>
+    <a href="examinations.html" onclick="toggleMenu()">Testing</a>
+    <a href="index.html#destinations" onclick="toggleMenu()">Destinations</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="register.html" class="mobile-nav-cta" onclick="toggleMenu()">Register Your Interest →</a>
+  </nav>
+</div>
 
 <!-- MAIN -->
 <div class="page-wrap">
@@ -287,13 +355,31 @@
         frameborder="0"
         marginheight="0"
         marginwidth="0"
-        title="Orbit Teaching Academy — Register Your Interest">
+        title="Orbit Teaching &amp; Testing Academy — Register Your Interest">
         Loading form…
       </iframe>
     </div>
 
     <div class="form-footer-note">
-      <span>🔒</span> Your information is private and will only be used to contact you about Orbit Teaching Academy. We will never share or sell your details.
+      <span>🔒</span> Your information is private and will only be used to contact you about Orbit Teaching &amp; Testing Academy. We will never share or sell your details.
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div style="margin-top:1.5rem; background:var(--white); border:1px solid var(--gray-light); border-radius:8px; padding:1.5rem 2rem; display:flex; flex-wrap:wrap; gap:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div style="width:36px; height:36px; background:var(--teal-pale); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;">📧</div>
+        <div>
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); margin-bottom:0.2rem;">Email Us</div>
+          <a href="mailto:passport@orbitteachingacademy.com" style="font-size:0.95rem; font-weight:600; color:var(--navy); text-decoration:none;">passport@orbitteachingacademy.com</a>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div style="width:36px; height:36px; background:var(--teal-pale); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;">📍</div>
+        <div>
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); margin-bottom:0.2rem;">Location</div>
+          <div style="font-size:0.95rem; font-weight:600; color:var(--navy);">Philadelphia, Pennsylvania</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -302,10 +388,23 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-bottom">
-    <span>© 2026 Orbit Teaching Academy · <a href="index.html">Back to Home</a> · <a href="about.html">About Us</a></span>
+    <span>© 2026 Orbit Teaching &amp; Testing Academy · Philadelphia, PA · <a href="index.html">Back to Home</a> · <a href="mailto:passport@orbitteachingacademy.com" style="color:var(--teal-light);">passport@orbitteachingacademy.com</a></span>
     <span>Get Certified. Teach. Travel. Transform Lives.</span>
   </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
 </body>
 </html>
