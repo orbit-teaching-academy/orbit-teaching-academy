@@ -1,3 +1,7 @@
+# Keeps the existing homepage rule and adds the functions folder used by the enquiry form.
+[functions]
+  directory = "netlify/functions"
+
 [[redirects]]
   from = "/"
   to = "/index.html"
