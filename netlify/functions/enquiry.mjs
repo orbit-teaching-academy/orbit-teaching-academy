@@ -37,9 +37,12 @@ export default async (req) => {
   try {
     const res = await fetch(url, { method: 'POST', body: out, redirect: 'follow', signal: ctl.signal });
     const j = await res.json();
+    // TEMPORARY DEBUG (remove before launch): only for connectivity tests (test=1)
+    if (incoming.get('test') === '1') return json({ ok: j.ok === true, id: null, debug: { v: 'dbg-1', url_end: url.slice(-6), upstream: j } });
     // Return only what the page needs. Never echo upstream details.
     return json({ ok: j.ok === true, id: j.id || null, error: j.ok === true ? undefined : (j.error || 'server') });
   } catch (e) {
+    if (incoming.get('test') === '1') return json({ ok: false, error: 'server', debug: { v: 'dbg-1', url_end: url.slice(-6), message: String(e && e.message) } }, 502);
     return json({ ok: false, error: 'server' }, 502);
   } finally { clearTimeout(timer); }
 };
